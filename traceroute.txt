@@ -1,0 +1,79 @@
+UDP Traceroute to google.com (172.217.15.110)
+
+Wireshark filter:
+(!ntp && !tcp && !arp && !dns) || (dns.qry.name == "google.com")
+
+[root@ip-172-31-94-185 ec2-user]# traceroute -n google.com
+traceroute to google.com (172.217.15.110), 30 hops max, 60 byte packets
+ 1  216.182.226.142  19.596 ms 216.182.226.130  3.025 ms 216.182.226.142  19.556 ms
+ 2  100.66.9.184  21.504 ms 100.66.13.38  24.416 ms 100.66.8.120  21.456 ms
+ 3  100.66.10.206  14.640 ms 100.66.44.96  3.157 ms 100.66.10.192  16.867 ms
+ 4  100.66.6.169  15.205 ms 100.66.7.187  17.129 ms 100.66.7.245  13.042 ms
+ 5  100.66.6.57  288.409 ms 100.66.5.149  23.620 ms 100.66.5.93  21.045 ms
+ 6  100.66.5.127  8.393 ms 100.65.13.225  0.463 ms 100.65.12.33  0.485 ms
+ 7  52.93.28.203  0.550 ms 52.93.28.219  0.403 ms 100.65.13.241  0.256 ms
+ 8  100.100.2.42  0.536 ms 100.100.2.44  0.446 ms 100.100.2.34  0.548 ms
+ 9  99.82.181.25  0.586 ms 100.100.2.44  0.328 ms 99.82.181.23  0.877 ms
+10  * 99.82.181.23  0.855 ms 99.82.181.25  0.583 ms
+11  216.239.54.124  2.469 ms 209.85.246.80  0.905 ms 108.170.228.150  0.838 ms
+12  216.239.49.168  0.909 ms 108.170.246.49  1.007 ms 74.125.37.220  1.913 ms
+13  172.217.15.110  0.592 ms  0.614 ms 108.170.246.34  7.596 ms
+
+-->
+UDP initial destination port is 33434
+response for `ip.ttl == 12` shows ICMP TTL exceeded
+response for `ip.ttl == 13` shows ICMP Destination unreachable
+
+------------------------------------------------------------------------------------
+
+ICMP traceroute to google.com:
+
+Wireshark filter:
+(!ntp && !tcp && !arp && !dns) || (dns.qry.name == "google.com")
+
+[root@ip-172-31-94-185 ec2-user]# traceroute google.com -I
+traceroute to google.com (172.217.15.78), 30 hops max, 60 byte packets
+ 1  216.182.229.203 (216.182.229.203)  91.398 ms  91.396 ms  91.378 ms
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  100.65.13.161 (100.65.13.161)  0.410 ms  0.464 ms  0.354 ms
+ 8  52.93.28.203 (52.93.28.203)  0.548 ms  0.524 ms  0.419 ms
+ 9  100.100.2.40 (100.100.2.40)  0.494 ms  0.483 ms  0.438 ms
+10  99.82.181.23 (99.82.181.23)  0.838 ms  0.819 ms  0.823 ms
+11  * * *
+12  216.239.48.200 (216.239.48.200)  0.953 ms  0.960 ms  0.978 ms
+13  209.85.251.83 (209.85.251.83)  1.856 ms  1.853 ms  1.853 ms
+14  iad23s63-in-f14.1e100.net (172.217.15.78)  1.066 ms  1.067 ms  1.065 ms
+
+-->
+Response for `icmp.seq == 39` gives ICMP time exceeded (39 -> 3rd packet in 13th row)
+Response for `icmp.seq == 40` gives ICMP echo reply
+
+------------------------------------------------------------------------------------
+
+TCP traceroute to google.com:
+
+Wireshark filter:
+(!ntp && !udp && !arp && !dns && !ssh) || (dns.qry.name == "google.com")
+
+[root@ip-172-31-32-93 ec2-user]# traceroute google.com -Tn
+traceroute to google.com (172.217.7.238), 30 hops max, 60 byte packets
+ 1  * * *
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  100.65.13.33  0.370 ms 100.65.15.129  2.609 ms 100.65.14.33  0.294 ms
+ 7  52.93.28.195  0.988 ms 52.93.28.137  1.197 ms 52.93.28.195  0.945 ms
+ 8  100.100.2.40  1.172 ms 100.100.2.44  1.684 ms 100.100.2.34  1.071 ms
+ 9  99.82.181.23  1.576 ms 99.82.181.25  1.194 ms 99.82.181.23  1.575 ms
+10  209.85.241.240  1.523 ms 99.82.181.23  1.581 ms 64.233.175.222  3.694 ms
+11  216.239.48.177  1.415 ms  1.522 ms 64.233.175.222  3.497 ms
+12  172.217.7.238  1.425 ms  1.322 ms  1.350 ms
+
+-->
+Response for `ip.ttl == 11` gives ICMP TTL exceeded
+Response for `ip.ttl == 12` gives SYN+ACK when is then resetted by the client (RST)
