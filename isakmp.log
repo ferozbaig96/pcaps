@@ -1,0 +1,1530 @@
+Plutorun started on Thu Jun 25 00:16:47 UTC 2015
+adjusting ipsec.d to /etc/ipsec.d
+Starting Pluto (Openswan Version 2.6.43; Vendor ID OSW{UGAoLgKd) pid:14126
+LEAK_DETECTIVE support [disabled]
+OCF support for IKE [disabled]
+SAref support [disabled]: Protocol not available
+SAbind support [disabled]: Protocol not available
+NSS support [disabled]
+HAVE_STATSD notification support not compiled in
+Setting NAT-Traversal port-4500 floating to off
+   port floating activation criteria nat_t=0/port_float=1
+   NAT-Traversal support  [disabled]
+| opening /dev/urandom
+using /dev/urandom as source of random entropy
+| inserting event EVENT_REINIT_SECRET, timeout in 3600 seconds
+| event added at head of queue
+| inserting event EVENT_PENDING_DDNS, timeout in 60 seconds
+| event added at head of queue
+| inserting event EVENT_PENDING_PHASE2, timeout in 120 seconds
+| event added after event EVENT_PENDING_DDNS
+ike_alg_register_enc(): Activating OAKLEY_AES_CBC: Ok (ret=0)
+ike_alg_register_hash(): Activating OAKLEY_SHA2_512: Ok (ret=0)
+ike_alg_register_hash(): Activating OAKLEY_SHA2_256: Ok (ret=0)
+starting up 1 cryptographic helpers
+started helper pid=14131 (fd:4)
+Using Linux XFRM/NETKEY IPsec interface code on 3.14.35-28.38.amzn1.x86_64
+| process 14126 listening for PF_KEY_V2 on file descriptor 8
+| finish_pfkey_msg: K_SADB_REGISTER message 1 for AH 
+|   02 07 00 02  02 00 00 00  01 00 00 00  2e 37 00 00
+| opening /dev/urandom
+using /dev/urandom as source of random entropy
+! helper 0 waiting on fd: 6
+| pfkey_get: K_SADB_REGISTER message 1
+| AH registered with kernel.
+| finish_pfkey_msg: K_SADB_REGISTER message 2 for ESP 
+|   02 07 00 03  02 00 00 00  02 00 00 00  2e 37 00 00
+| pfkey_get: K_SADB_REGISTER message 2
+| alg_init():memset(0x7ff3995af920, 0, 2048) memset(0x7ff3995b0120, 0, 2048) 
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: sadb_msg_len=22 sadb_supported_len=72
+| kernel_alg_add():satype=3, exttype=14, alg_id=251
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[0], exttype=14, satype=3, alg_id=251, alg_ivlen=0, alg_minbits=0, alg_maxbits=0, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=14, alg_id=2
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[1], exttype=14, satype=3, alg_id=2, alg_ivlen=0, alg_minbits=128, alg_maxbits=128, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=14, alg_id=3
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[2], exttype=14, satype=3, alg_id=3, alg_ivlen=0, alg_minbits=160, alg_maxbits=160, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=14, alg_id=5
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[3], exttype=14, satype=3, alg_id=5, alg_ivlen=0, alg_minbits=256, alg_maxbits=256, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=14, alg_id=6
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[4], exttype=14, satype=3, alg_id=6, alg_ivlen=0, alg_minbits=384, alg_maxbits=384, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=14, alg_id=7
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[5], exttype=14, satype=3, alg_id=7, alg_ivlen=0, alg_minbits=512, alg_maxbits=512, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=14, alg_id=8
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[6], exttype=14, satype=3, alg_id=8, alg_ivlen=0, alg_minbits=160, alg_maxbits=160, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=14, alg_id=9
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[7], exttype=14, satype=3, alg_id=9, alg_ivlen=0, alg_minbits=128, alg_maxbits=128, res=0, ret=1
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: sadb_msg_len=22 sadb_supported_len=88
+| kernel_alg_add():satype=3, exttype=15, alg_id=11
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[8], exttype=15, satype=3, alg_id=11, alg_ivlen=0, alg_minbits=0, alg_maxbits=0, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=15, alg_id=2
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[9], exttype=15, satype=3, alg_id=2, alg_ivlen=8, alg_minbits=64, alg_maxbits=64, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=15, alg_id=3
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[10], exttype=15, satype=3, alg_id=3, alg_ivlen=8, alg_minbits=192, alg_maxbits=192, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=15, alg_id=6
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[11], exttype=15, satype=3, alg_id=6, alg_ivlen=8, alg_minbits=40, alg_maxbits=128, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=15, alg_id=7
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[12], exttype=15, satype=3, alg_id=7, alg_ivlen=8, alg_minbits=40, alg_maxbits=448, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=15, alg_id=12
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[13], exttype=15, satype=3, alg_id=12, alg_ivlen=8, alg_minbits=128, alg_maxbits=256, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=15, alg_id=252
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[14], exttype=15, satype=3, alg_id=252, alg_ivlen=8, alg_minbits=128, alg_maxbits=256, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=15, alg_id=22
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[15], exttype=15, satype=3, alg_id=22, alg_ivlen=8, alg_minbits=128, alg_maxbits=256, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=15, alg_id=253
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[16], exttype=15, satype=3, alg_id=253, alg_ivlen=8, alg_minbits=128, alg_maxbits=256, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=15, alg_id=13
+| kernel_alg_register_pfkey(): SADB_SATYPE_ESP: alg[17], exttype=15, satype=3, alg_id=13, alg_ivlen=8, alg_minbits=160, alg_maxbits=288, res=0, ret=1
+| kernel_alg_add():satype=3, exttype=15, alg_id=18
+| kernel_alg_add():satype=3, exttype=15, alg_id=19
+| kernel_alg_add():satype=3, exttype=15, alg_id=20
+| kernel_alg_add():satype=3, exttype=15, alg_id=14
+| kernel_alg_add():satype=3, exttype=15, alg_id=15
+| kernel_alg_add():satype=3, exttype=15, alg_id=16
+ike_alg_register_enc(): Activating aes_ccm_8: Ok (ret=0)
+ike_alg_add(): ERROR: algo_type '0', algo_id '0', Algorithm type already exists
+ike_alg_register_enc(): Activating aes_ccm_12: FAILED (ret=-17)
+ike_alg_add(): ERROR: algo_type '0', algo_id '0', Algorithm type already exists
+ike_alg_register_enc(): Activating aes_ccm_16: FAILED (ret=-17)
+ike_alg_add(): ERROR: algo_type '0', algo_id '0', Algorithm type already exists
+ike_alg_register_enc(): Activating aes_gcm_8: FAILED (ret=-17)
+ike_alg_add(): ERROR: algo_type '0', algo_id '0', Algorithm type already exists
+ike_alg_register_enc(): Activating aes_gcm_12: FAILED (ret=-17)
+ike_alg_add(): ERROR: algo_type '0', algo_id '0', Algorithm type already exists
+ike_alg_register_enc(): Activating aes_gcm_16: FAILED (ret=-17)
+| ESP registered with kernel.
+| finish_pfkey_msg: K_SADB_REGISTER message 3 for IPCOMP 
+|   02 07 00 09  02 00 00 00  03 00 00 00  2e 37 00 00
+| pfkey_get: K_SADB_REGISTER message 3
+| IPCOMP registered with kernel.
+| Changed path to directory '/etc/ipsec.d/cacerts'
+| Changed path to directory '/etc/ipsec.d/aacerts'
+| Changed path to directory '/etc/ipsec.d/ocspcerts'
+| Changing to directory '/etc/ipsec.d/crls'
+| inserting event EVENT_LOG_DAILY, timeout in 85393 seconds
+| event added after event EVENT_REINIT_SECRET
+| next event EVENT_PENDING_DDNS in 60 seconds
+|  
+| *received whack message
+| alg_info_parse_str() ealg_buf=aes aalg_buf=sha1 eklen=128  aklen=0
+| enum_search_prefix () calling enum_search(0x7ff399592040, "OAKLEY_AES")
+| enum_search_ppfixi () calling enum_search(0x7ff399592040, "OAKLEY_AES_CBC")
+| parser_alg_info_add() ealg_getbyname("aes")=7
+| enum_search_prefix () calling enum_search(0x7ff399592020, "OAKLEY_SHA1")
+| parser_alg_info_add() aalg_getbyname("sha1")=2
+| enum_search_prefix () calling enum_search(0x7ff399591fe0, "OAKLEY_GROUP_MODP1024")
+| parser_alg_info_add() modp_getbyname("modp1024")=2
+| __alg_info_ike_add() ealg=7 aalg=2 modp_id=2, cnt=1
+| Added new connection awslegacyvpn with policy PSK+ENCRYPT+TUNNEL+PFS+SAREFTRACK
+| from whack: got --esp=aes128-sha1;modp1024
+| enum_search_prefix () calling enum_search(0x7ff399591fe0, "OAKLEY_GROUP_MODP1024")
+| alg_info_parse_str() ealg_buf=aes aalg_buf=sha1 eklen=128  aklen=0
+| enum_search_prefix () calling enum_search(0x7ff3995921a0, "ESP_AES")
+| parser_alg_info_add() ealg_getbyname("aes")=12
+| enum_search_prefix () calling enum_search(0x7ff399592160, "AUTH_ALGORITHM_HMAC_SHA1")
+| parser_alg_info_add() aalg_getbyname("sha1")=2
+| __alg_info_esp_add() ealg=12 aalg=2 cnt=1
+| esp string values: AES(12)_128-SHA1(2)_000; pfsgroup=MODP1024(2); flags=-strict
+| ike (phase1) algorihtm values: AES_CBC(7)_128-SHA1(2)_000-MODP1024(2); flags=-strict
+| counting wild cards for 54.165.11.182 is 0
+| counting wild cards for 207.171.167.234 is 0
+| alg_info_addref() alg_info->ref_cnt=1
+| alg_info_addref() alg_info->ref_cnt=1
+added connection description "awslegacyvpn"
+| 10.0.0.0/16===10.0.0.233<10.0.0.233>[54.165.11.182]---10.0.0.1...10.0.0.1---207.171.167.234<207.171.167.234>===172.31.0.0/16
+| ike_life: 28800s; ipsec_life: 3600s; rekey_margin: 540s; rekey_fuzz: 100%; keyingtries: 0; policy: PSK+ENCRYPT+TUNNEL+PFS+SAREFTRACK
+| * processed 0 messages from cryptographic helpers 
+| next event EVENT_PENDING_DDNS in 60 seconds
+| next event EVENT_PENDING_DDNS in 60 seconds
+|  
+| *received whack message
+| kernel_alg_esp_enc_ok(12,0): alg_id=12, alg_ivlen=8, alg_minbits=128, alg_maxbits=256, res=0, ret=1
+| kernel_alg_esp_auth_keylen(auth=2, sadb_aalg=3): a_keylen=20
+| * processed 0 messages from cryptographic helpers 
+| next event EVENT_PENDING_DDNS in 60 seconds
+| next event EVENT_PENDING_DDNS in 60 seconds
+|  
+| *received whack message
+listening for IKE messages
+| found lo with address 127.0.0.1
+| found eth0 with address 10.0.0.233
+adding interface eth0/eth0 10.0.0.233:500
+adding interface lo/lo 127.0.0.1:500
+| found lo with address 0000:0000:0000:0000:0000:0000:0000:0001
+adding interface lo/lo ::1:500
+| connect_to_host_pair: 10.0.0.233:500 207.171.167.234:500 -> hp:none 
+loading secrets from "/etc/ipsec.secrets"
+loaded private key for keyid: PPK_RSA:AQOhuKDqq
+| id type added to secret(0x7ff39ab65050) PPK_PSK: %any
+| id type added to secret(0x7ff39ab65050) PPK_PSK: %any
+| Processing PSK at line 16: passed
+| * processed 0 messages from cryptographic helpers 
+| next event EVENT_PENDING_DDNS in 60 seconds
+| next event EVENT_PENDING_DDNS in 60 seconds
+|  
+| *received whack message
+| processing connection awslegacyvpn
+| route owner of "awslegacyvpn" unrouted: NULL; eroute owner: NULL
+| could_route called for awslegacyvpn (kind=CK_PERMANENT)
+| route owner of "awslegacyvpn" unrouted: NULL; eroute owner: NULL
+| route_and_eroute with c: awslegacyvpn (next: none) ero:null esr:{(nil)} ro:null rosr:{(nil)} and state: 0
+| request to add a prospective erouted policy with netkey kernel --- experimental
+| satype(0) is not used in netlink_raw_eroute.
+| route_and_eroute: firewall_notified: true
+| command executing prepare-client
+| executing prepare-client: 2>&1 PLUTO_VERB='prepare-client' PLUTO_VERSION='2.0' PLUTO_CONNECTION='awslegacyvpn' PLUTO_INTERFACE='eth0' PLUTO_NEXT_HOP='10.0.0.1' PLUTO_ME='10.0.0.233' PLUTO_MY_ID='54.165.11.182' PLUTO_MY_CLIENT='10.0.0.0/16' PLUTO_MY_CLIENT_NET='10.0.0.0' PLUTO_MY_CLIENT_MASK='255.255.0.0' PLUTO_MY_PORT='0' PLUTO_MY_PROTOCOL='0' PLUTO_PEER='207.171.167.234' PLUTO_PEER_ID='207.171.167.234' PLUTO_PEER_CLIENT='172.31.0.0/16' PLUTO_PEER_CLIENT_NET='172.31.0.0' PLUTO_PEER_CLIENT_MASK='255.255.0.0' PLUTO_PEER_PORT='0' PLUTO_PEER_PROTOCOL='0' PLUTO_PEER_CA='' PLUTO_STACK='netkey'   PLUTO_CONN_POLICY='PSK+ENCRYPT+TUNNEL+PFS+SAREFTRACK' PLUTO_CONN_ADDRFAMILY='ipv4'   PLUTO_IS_PEER_CISCO='0' PLUTO_CISCO_DNS_INFO='' PLUTO_CISCO_DOMAIN_INFO='' PLUTO_PEER_BANNER='' PLUTO_NM_CONFIGURED='0' ipsec _updown
+| popen(): cmd is 789 chars long
+| cmd(   0):2>&1 PLUTO_VERB='prepare-client' PLUTO_VERSION='2.0' PLUTO_CONNECTION='awslegacy:
+| cmd(  80):vpn' PLUTO_INTERFACE='eth0' PLUTO_NEXT_HOP='10.0.0.1' PLUTO_ME='10.0.0.233' PLUT:
+| cmd( 160):O_MY_ID='54.165.11.182' PLUTO_MY_CLIENT='10.0.0.0/16' PLUTO_MY_CLIENT_NET='10.0.:
+| cmd( 240):0.0' PLUTO_MY_CLIENT_MASK='255.255.0.0' PLUTO_MY_PORT='0' PLUTO_MY_PROTOCOL='0' :
+| cmd( 320):PLUTO_PEER='207.171.167.234' PLUTO_PEER_ID='207.171.167.234' PLUTO_PEER_CLIENT=':
+| cmd( 400):172.31.0.0/16' PLUTO_PEER_CLIENT_NET='172.31.0.0' PLUTO_PEER_CLIENT_MASK='255.25:
+| cmd( 480):5.0.0' PLUTO_PEER_PORT='0' PLUTO_PEER_PROTOCOL='0' PLUTO_PEER_CA='' PLUTO_STACK=:
+| cmd( 560):'netkey'   PLUTO_CONN_POLICY='PSK+ENCRYPT+TUNNEL+PFS+SAREFTRACK' PLUTO_CONN_ADDR:
+| cmd( 640):FAMILY='ipv4'   PLUTO_IS_PEER_CISCO='0' PLUTO_CISCO_DNS_INFO='' PLUTO_CISCO_DOMA:
+| cmd( 720):IN_INFO='' PLUTO_PEER_BANNER='' PLUTO_NM_CONFIGURED='0' ipsec _updown:
+| command executing route-client
+| executing route-client: 2>&1 PLUTO_VERB='route-client' PLUTO_VERSION='2.0' PLUTO_CONNECTION='awslegacyvpn' PLUTO_INTERFACE='eth0' PLUTO_NEXT_HOP='10.0.0.1' PLUTO_ME='10.0.0.233' PLUTO_MY_ID='54.165.11.182' PLUTO_MY_CLIENT='10.0.0.0/16' PLUTO_MY_CLIENT_NET='10.0.0.0' PLUTO_MY_CLIENT_MASK='255.255.0.0' PLUTO_MY_PORT='0' PLUTO_MY_PROTOCOL='0' PLUTO_PEER='207.171.167.234' PLUTO_PEER_ID='207.171.167.234' PLUTO_PEER_CLIENT='172.31.0.0/16' PLUTO_PEER_CLIENT_NET='172.31.0.0' PLUTO_PEER_CLIENT_MASK='255.255.0.0' PLUTO_PEER_PORT='0' PLUTO_PEER_PROTOCOL='0' PLUTO_PEER_CA='' PLUTO_STACK='netkey'   PLUTO_CONN_POLICY='PSK+ENCRYPT+TUNNEL+PFS+SAREFTRACK' PLUTO_CONN_ADDRFAMILY='ipv4'   PLUTO_IS_PEER_CISCO='0' PLUTO_CISCO_DNS_INFO='' PLUTO_CISCO_DOMAIN_INFO='' PLUTO_PEER_BANNER='' PLUTO_NM_CONFIGURED='0' ipsec _updown
+| popen(): cmd is 787 chars long
+| cmd(   0):2>&1 PLUTO_VERB='route-client' PLUTO_VERSION='2.0' PLUTO_CONNECTION='awslegacyvp:
+| cmd(  80):n' PLUTO_INTERFACE='eth0' PLUTO_NEXT_HOP='10.0.0.1' PLUTO_ME='10.0.0.233' PLUTO_:
+| cmd( 160):MY_ID='54.165.11.182' PLUTO_MY_CLIENT='10.0.0.0/16' PLUTO_MY_CLIENT_NET='10.0.0.:
+| cmd( 240):0' PLUTO_MY_CLIENT_MASK='255.255.0.0' PLUTO_MY_PORT='0' PLUTO_MY_PROTOCOL='0' PL:
+| cmd( 320):UTO_PEER='207.171.167.234' PLUTO_PEER_ID='207.171.167.234' PLUTO_PEER_CLIENT='17:
+| cmd( 400):2.31.0.0/16' PLUTO_PEER_CLIENT_NET='172.31.0.0' PLUTO_PEER_CLIENT_MASK='255.255.:
+| cmd( 480):0.0' PLUTO_PEER_PORT='0' PLUTO_PEER_PROTOCOL='0' PLUTO_PEER_CA='' PLUTO_STACK='n:
+| cmd( 560):etkey'   PLUTO_CONN_POLICY='PSK+ENCRYPT+TUNNEL+PFS+SAREFTRACK' PLUTO_CONN_ADDRFA:
+| cmd( 640):MILY='ipv4'   PLUTO_IS_PEER_CISCO='0' PLUTO_CISCO_DNS_INFO='' PLUTO_CISCO_DOMAIN:
+| cmd( 720):_INFO='' PLUTO_PEER_BANNER='' PLUTO_NM_CONFIGURED='0' ipsec _updown:
+| * processed 0 messages from cryptographic helpers 
+| next event EVENT_PENDING_DDNS in 60 seconds
+| next event EVENT_PENDING_DDNS in 60 seconds
+|
+
+
+========================================================================
+PHASE 1 MESSAGE 1
+========================================================================
+
+  
+| *received whack message
+| processing connection awslegacyvpn
+| kernel_alg_db_new() initial trans_cnt=128
+| kernel_alg_db_new() will return p_new->protoid=3, p_new->trans_cnt=1
+| kernel_alg_db_new()     trans[0]: transid=12, attr_cnt=2, attrs[0].type=5, attrs[0].val=2
+| returning new proposal from esp_info
+| creating state object #1 at 0x7ff39ab651c0
+| processing connection awslegacyvpn
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  00 00 00 00  00 00 00 00
+| state hash entry 7
+| inserting state object #1
+| inserting event EVENT_SO_DISCARD, timeout in 0 seconds for #1
+| event added at head of queue
+| processing connection awslegacyvpn
+| Queuing pending Quick Mode with 207.171.167.234 "awslegacyvpn"
+"awslegacyvpn" #1: initiating Main Mode
+| **emit ISAKMP Message:
+|    initiator cookie:
+|   82 b6 5d 31  50 15 ab 45
+|    responder cookie:
+|   00 00 00 00  00 00 00 00
+|    next payload type: ISAKMP_NEXT_SA
+|    ISAKMP version: ISAKMP Version 1.0 (rfc2407)
+|    exchange type: ISAKMP_XCHG_IDPROT
+|    flags: none
+|    message ID:  00 00 00 00
+| ***emit ISAKMP Security Association Payload:
+|    next payload type: ISAKMP_NEXT_VID
+|    DOI: ISAKMP_DOI_IPSEC
+| ****emit IPsec DOI SIT:
+|    IPsec DOI SIT: SIT_IDENTITY_ONLY
+| out_sa pcn: 0 has 1 valid proposals
+| out_sa pcn: 0 pn: 0<1 valid_count: 1 trans_cnt: 1
+| ****emit ISAKMP Proposal Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+|    proposal number: 0
+|    protocol ID: PROTO_ISAKMP
+|    SPI size: 0
+|    number of transforms: 1
+| *****emit ISAKMP Transform Payload (ISAKMP):
+|    next payload type: ISAKMP_NEXT_NONE
+|    transform number: 0
+|    transform ID: KEY_IKE
+| ******emit ISAKMP Oakley attribute:
+|    af+type: OAKLEY_LIFE_TYPE
+|    length/value: 1
+|     [1 is OAKLEY_LIFE_SECONDS]
+| ******emit ISAKMP Oakley attribute:
+|    af+type: OAKLEY_LIFE_DURATION
+|    length/value: 28800
+| ******emit ISAKMP Oakley attribute:
+|    af+type: OAKLEY_ENCRYPTION_ALGORITHM
+|    length/value: 7
+|     [7 is OAKLEY_AES_CBC]
+| ******emit ISAKMP Oakley attribute:
+|    af+type: OAKLEY_HASH_ALGORITHM
+|    length/value: 2
+|     [2 is OAKLEY_SHA1]
+| ******emit ISAKMP Oakley attribute:
+|    af+type: OAKLEY_AUTHENTICATION_METHOD
+|    length/value: 1
+|     [1 is OAKLEY_PRESHARED_KEY]
+| ******emit ISAKMP Oakley attribute:
+|    af+type: OAKLEY_GROUP_DESCRIPTION
+|    length/value: 2
+|     [2 is OAKLEY_GROUP_MODP1024]
+| ******emit ISAKMP Oakley attribute:
+|    af+type: OAKLEY_KEY_LENGTH
+|    length/value: 128
+| emitting length of ISAKMP Transform Payload (ISAKMP): 36
+| emitting length of ISAKMP Proposal Payload: 44
+| emitting length of ISAKMP Security Association Payload: 56
+| ***emit ISAKMP Vendor ID Payload:
+|    next payload type: ISAKMP_NEXT_VID
+| emitting 12 raw bytes of Vendor ID into ISAKMP Vendor ID Payload
+| Vendor ID  4f 53 57 7b  55 47 41 6f  4c 67 4b 64
+| emitting length of ISAKMP Vendor ID Payload: 16
+| out_vendorid(): sending [Dead Peer Detection]
+| ***emit ISAKMP Vendor ID Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+| emitting 16 raw bytes of V_ID into ISAKMP Vendor ID Payload
+| V_ID  af ca d7 13  68 a1 f1 c9  6b 86 96 fc  77 57 01 00
+| emitting length of ISAKMP Vendor ID Payload: 20
+| nat traversal enabled: 0
+| emitting length of ISAKMP Message: 120
+| sending 120 bytes for main_outI1 through eth0:500 to 207.171.167.234:500 (using #1)
+|   82 b6 5d 31  50 15 ab 45  00 00 00 00  00 00 00 00
+|   01 10 02 00  00 00 00 00  00 00 00 78  0d 00 00 38
+|   00 00 00 01  00 00 00 01  00 00 00 2c  00 01 00 01
+|   00 00 00 24  00 01 00 00  80 0b 00 01  80 0c 70 80
+|   80 01 00 07  80 02 00 02  80 03 00 01  80 04 00 02
+|   80 0e 00 80  0d 00 00 10  4f 53 57 7b  55 47 41 6f
+|   4c 67 4b 64  00 00 00 14  af ca d7 13  68 a1 f1 c9
+|   6b 86 96 fc  77 57 01 00
+| deleting event for #1
+| inserting event EVENT_RETRANSMIT, timeout in 10 seconds for #1
+| event added at head of queue
+| * processed 0 messages from cryptographic helpers 
+| next event EVENT_RETRANSMIT in 10 seconds for #1
+| next event EVENT_RETRANSMIT in 10 seconds for #1
+|
+
+========================================================================
+PHASE 1 MESSAGE 2 - RESPONSE FROM PEER
+========================================================================
+
+  
+| *received 104 bytes from 207.171.167.234:500 on eth0 (port=500)
+|   82 b6 5d 31  50 15 ab 45  b0 93 d9 e1  60 b0 95 f2
+|   01 10 02 00  00 00 00 00  00 00 00 68  0d 00 00 38
+|   00 00 00 01  00 00 00 01  00 00 00 2c  00 01 00 01
+|   00 00 00 24  00 01 00 00  80 0b 00 01  80 0c 70 80
+|   80 01 00 07  80 02 00 02  80 03 00 01  80 04 00 02
+|   80 0e 00 80  00 00 00 14  af ca d7 13  68 a1 f1 c9
+|   6b 86 96 fc  77 57 01 00
+| **parse ISAKMP Message:
+|    initiator cookie:
+|   82 b6 5d 31  50 15 ab 45
+|    responder cookie:
+|   b0 93 d9 e1  60 b0 95 f2
+|    next payload type: ISAKMP_NEXT_SA
+|    ISAKMP version: ISAKMP Version 1.0 (rfc2407)
+|    exchange type: ISAKMP_XCHG_IDPROT
+|    flags: none
+|    message ID:  00 00 00 00
+|    length: 104
+|  processing version=1.0 packet with exchange type=ISAKMP_XCHG_IDPROT (2)
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  b0 93 d9 e1  60 b0 95 f2
+| state hash entry 31
+| v1 state object not found
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  00 00 00 00  00 00 00 00
+| state hash entry 7
+| v1 peer and cookies match on #1, provided msgid 00000000 vs 00000000
+| v1 state object #1 found, in STATE_MAIN_I1
+| processing connection awslegacyvpn
+| got payload 0x2(ISAKMP_NEXT_SA) needed: 0x2 opt: 0x2080
+| ***parse ISAKMP Security Association Payload:
+|    next payload type: ISAKMP_NEXT_VID
+|    length: 56
+|    DOI: ISAKMP_DOI_IPSEC
+| got payload 0x2000(ISAKMP_NEXT_VID) needed: 0x0 opt: 0x2080
+| ***parse ISAKMP Vendor ID Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+|    length: 20
+"awslegacyvpn" #1: received Vendor ID payload [Dead Peer Detection]
+| ****parse IPsec DOI SIT:
+|    IPsec DOI SIT: SIT_IDENTITY_ONLY
+| ****parse ISAKMP Proposal Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+|    length: 44
+|    proposal number: 0
+|    protocol ID: PROTO_ISAKMP
+|    SPI size: 0
+|    number of transforms: 1
+| *****parse ISAKMP Transform Payload (ISAKMP):
+|    next payload type: ISAKMP_NEXT_NONE
+|    length: 36
+|    transform number: 0
+|    transform ID: KEY_IKE
+| ******parse ISAKMP Oakley attribute:
+|    af+type: OAKLEY_LIFE_TYPE
+|    length/value: 1
+|    [1 is OAKLEY_LIFE_SECONDS]
+| ******parse ISAKMP Oakley attribute:
+|    af+type: OAKLEY_LIFE_DURATION
+|    length/value: 28800
+| ******parse ISAKMP Oakley attribute:
+|    af+type: OAKLEY_ENCRYPTION_ALGORITHM
+|    length/value: 7
+|    [7 is OAKLEY_AES_CBC]
+| ike_alg_enc_ok(ealg=7,key_len=0): blocksize=16, keyminlen=128, keydeflen=128, keymaxlen=256, ret=1
+| ******parse ISAKMP Oakley attribute:
+|    af+type: OAKLEY_HASH_ALGORITHM
+|    length/value: 2
+|    [2 is OAKLEY_SHA1]
+| ******parse ISAKMP Oakley attribute:
+|    af+type: OAKLEY_AUTHENTICATION_METHOD
+|    length/value: 1
+|    [1 is OAKLEY_PRESHARED_KEY]
+
+
+========================================================================
+PHASE 1 PSK LOOKUP
+========================================================================
+
+| started looking for secret for 54.165.11.182->207.171.167.234 of kind PPK_PSK
+| actually looking for secret for 54.165.11.182->207.171.167.234 of kind PPK_PSK
+| line 16: key type PPK_PSK(54.165.11.182) to type PPK_PSK 
+| 1: compared key %any to 54.165.11.182 / 207.171.167.234 -> 2
+| 2: compared key %any to 54.165.11.182 / 207.171.167.234 -> 2
+| line 16: match=2 
+| best_match 0>2 best=0x7ff39ab65050 (line=16)
+| line 1: key type PPK_PSK(54.165.11.182) to type PPK_RSA 
+| concluding with best_match=2 best=0x7ff39ab65050 (lineno=16)
+| ******parse ISAKMP Oakley attribute:
+|    af+type: OAKLEY_GROUP_DESCRIPTION
+|    length/value: 2
+|    [2 is OAKLEY_GROUP_MODP1024]
+| ******parse ISAKMP Oakley attribute:
+|    af+type: OAKLEY_KEY_LENGTH
+|    length/value: 128
+| ike_alg_enc_ok(ealg=7,key_len=128): blocksize=16, keyminlen=128, keydeflen=128, keymaxlen=256, ret=1
+
+| Oakley Transform 0 accepted
+
+| sender checking NAT-T: 0 and 0
+| 0: w->pcw_dead: 0 w->pcw_work: 0 cnt: 1
+| asking helper 0 to do build_kenonce op on seq: 1 (len=2752, pcw_work=1)
+| crypto helper write of request: cnt=2752<wlen=2752.  
+| deleting event for #1
+| inserting event EVENT_CRYPTO_FAILED, timeout in 300 seconds for #1
+| event added after event EVENT_PENDING_PHASE2
+| peer supports dpd
+| enabling sending dpd
+| complete state transition with STF_SUSPEND
+| * processed 0 messages from cryptographic helpers 
+| next event EVENT_PENDING_DDNS in 60 seconds
+! helper 0 read 2744+4/2752 bytesfd: 6
+| next event EVENT_PENDING_DDNS in 60 seconds
+! helper 0 doing build_kenonce op id: 1
+
+
+========================================================================
+PHASE 1 KEY EXCHANGE MESSAGE 3
+========================================================================
+
+! Local DH secret:
+!   4e 6f 6f 91  07 60 fc 6f  4a 27 ae 3e  99 f4 db bc
+!   00 28 f5 98  6f 41 73 78  12 7a 23 1e  65 c6 66 03
+! Public DH value sent:
+!   42 b7 85 49  e1 ba fd b7  78 f9 31 88  d1 a5 a1 aa
+!   5b 64 32 1d  24 47 cf 38  3c e4 46 8b  11 10 0c ab
+!   62 6c a4 f2  a8 de 84 04  61 60 a2 f5  66 bb c6 78
+!   00 24 2a dd  6b 38 0b 61  ca 97 45 46  7f 37 54 ec
+!   0c 9e c0 3a  3b bd b9 9a  ae 7c f7 89  b3 86 ac 1f
+!   48 66 e6 f9  5e 0e b2 ee  16 55 e6 51  79 9b 81 4e
+!   87 dd e0 7a  9e 7a 77 7a  c4 83 44 72  74 c1 05 8b
+!   3a 34 60 9c  ea 07 e5 f9  12 42 37 cd  fe c0 11 b3
+! Generated nonce:
+!   12 72 ca b4  b2 26 6d c7  1a be 8c c6  59 88 47 7a
+|  
+| helper 0 has finished work (cnt now 1)
+| helper 0 replies to id: q#1
+| calling callback function 0x7ff3992cb9c0
+| main inR1_outI2: calculated ke+nonce, sending I2
+| processing connection awslegacyvpn
+| **emit ISAKMP Message:
+|    initiator cookie:
+|   82 b6 5d 31  50 15 ab 45
+|    responder cookie:
+|   b0 93 d9 e1  60 b0 95 f2
+|    next payload type: ISAKMP_NEXT_KE
+|    ISAKMP version: ISAKMP Version 1.0 (rfc2407)
+|    exchange type: ISAKMP_XCHG_IDPROT
+|    flags: none
+|    message ID:  00 00 00 00
+| ***emit ISAKMP Key Exchange Payload:
+|    next payload type: ISAKMP_NEXT_NONCE
+| emitting 128 raw bytes of keyex value into ISAKMP Key Exchange Payload
+| keyex value  42 b7 85 49  e1 ba fd b7  78 f9 31 88  d1 a5 a1 aa
+| keyex value  5b 64 32 1d  24 47 cf 38  3c e4 46 8b  11 10 0c ab
+| keyex value  62 6c a4 f2  a8 de 84 04  61 60 a2 f5  66 bb c6 78
+| keyex value  00 24 2a dd  6b 38 0b 61  ca 97 45 46  7f 37 54 ec
+| keyex value  0c 9e c0 3a  3b bd b9 9a  ae 7c f7 89  b3 86 ac 1f
+| keyex value  48 66 e6 f9  5e 0e b2 ee  16 55 e6 51  79 9b 81 4e
+| keyex value  87 dd e0 7a  9e 7a 77 7a  c4 83 44 72  74 c1 05 8b
+| keyex value  3a 34 60 9c  ea 07 e5 f9  12 42 37 cd  fe c0 11 b3
+| emitting length of ISAKMP Key Exchange Payload: 132
+| ***emit ISAKMP Nonce Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+| emitting 16 raw bytes of Ni into ISAKMP Nonce Payload
+| Ni  12 72 ca b4  b2 26 6d c7  1a be 8c c6  59 88 47 7a
+| emitting length of ISAKMP Nonce Payload: 20
+| NAT-T checking st_nat_traversal for NAT_T_WITH_NATD
+| emitting length of ISAKMP Message: 180
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  00 00 00 00  00 00 00 00
+| state hash entry 7
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  b0 93 d9 e1  60 b0 95 f2
+| state hash entry 31
+| inserting state object #1
+| complete state transition with STF_OK
+"awslegacyvpn" #1: transition from state STATE_MAIN_I1 to state STATE_MAIN_I2
+| deleting event for #1
+| sending reply packet to 207.171.167.234:500 (from port 500)
+| sending 180 bytes for STATE_MAIN_I1 through eth0:500 to 207.171.167.234:500 (using #1)
+|   82 b6 5d 31  50 15 ab 45  b0 93 d9 e1  60 b0 95 f2
+|   04 10 02 00  00 00 00 00  00 00 00 b4  0a 00 00 84
+|   42 b7 85 49  e1 ba fd b7  78 f9 31 88  d1 a5 a1 aa
+|   5b 64 32 1d  24 47 cf 38  3c e4 46 8b  11 10 0c ab
+|   62 6c a4 f2  a8 de 84 04  61 60 a2 f5  66 bb c6 78
+|   00 24 2a dd  6b 38 0b 61  ca 97 45 46  7f 37 54 ec
+|   0c 9e c0 3a  3b bd b9 9a  ae 7c f7 89  b3 86 ac 1f
+|   48 66 e6 f9  5e 0e b2 ee  16 55 e6 51  79 9b 81 4e
+|   87 dd e0 7a  9e 7a 77 7a  c4 83 44 72  74 c1 05 8b
+|   3a 34 60 9c  ea 07 e5 f9  12 42 37 cd  fe c0 11 b3
+|   00 00 00 14  12 72 ca b4  b2 26 6d c7  1a be 8c c6
+|   59 88 47 7a
+| inserting event EVENT_RETRANSMIT, timeout in 10 seconds for #1
+| event added at head of queue
+"awslegacyvpn" #1: STATE_MAIN_I2: sent MI2, expecting MR2
+| modecfg pull: noquirk policy:push not-client
+| phase 1 is done, looking for phase 2 to unpend
+| * processed 1 messages from cryptographic helpers 
+| next event EVENT_RETRANSMIT in 10 seconds for #1
+| next event EVENT_RETRANSMIT in 10 seconds for #1
+|  
+========================================================================
+PHASE 1 KEY EXCHANGE FROM PEER - MESSAGE 4
+========================================================================
+| *received 180 bytes from 207.171.167.234:500 on eth0 (port=500)
+|   82 b6 5d 31  50 15 ab 45  b0 93 d9 e1  60 b0 95 f2
+|   04 10 02 00  00 00 00 00  00 00 00 b4  0a 00 00 84
+|   f6 ea 36 cd  3a 78 9b 78  60 e4 ab 7d  76 a0 b9 da
+|   33 c9 20 5a  33 56 48 2a  83 0b 75 96  51 81 a5 23
+|   80 29 cf 76  aa 78 e1 f2  de 95 8b 60  f6 92 5d 64
+|   e9 bc a2 03  56 b4 f6 69  6c 32 77 7c  cc 19 75 82
+|   22 71 c0 8c  80 32 03 f9  a6 5d 8e 89  85 4a e6 5c
+|   ef ca cc 17  53 6e ea 99  cc b8 52 57  d5 3b 1b aa
+|   98 4b 75 93  22 22 bd 1b  3a e6 b5 c4  ea ea 5d 5f
+|   00 75 d6 7a  b0 a7 9f c1  83 85 4c 18  46 0e e1 87
+|   00 00 00 14  3e e2 9d 09  70 89 50 41  bd d6 38 7f
+|   48 39 8c 1f
+| **parse ISAKMP Message:
+|    initiator cookie:
+|   82 b6 5d 31  50 15 ab 45
+|    responder cookie:
+|   b0 93 d9 e1  60 b0 95 f2
+|    next payload type: ISAKMP_NEXT_KE
+|    ISAKMP version: ISAKMP Version 1.0 (rfc2407)
+|    exchange type: ISAKMP_XCHG_IDPROT
+|    flags: none
+|    message ID:  00 00 00 00
+|    length: 180
+|  processing version=1.0 packet with exchange type=ISAKMP_XCHG_IDPROT (2)
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  b0 93 d9 e1  60 b0 95 f2
+| state hash entry 31
+| v1 peer and cookies match on #1, provided msgid 00000000 vs 00000000
+| v1 state object #1 found, in STATE_MAIN_I2
+| processing connection awslegacyvpn
+| got payload 0x10(ISAKMP_NEXT_KE) needed: 0x410 opt: 0x102080
+| ***parse ISAKMP Key Exchange Payload:
+|    next payload type: ISAKMP_NEXT_NONCE
+|    length: 132
+| got payload 0x400(ISAKMP_NEXT_NONCE) needed: 0x400 opt: 0x102080
+| ***parse ISAKMP Nonce Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+|    length: 20
+| **emit ISAKMP Message:
+|    initiator cookie:
+|   82 b6 5d 31  50 15 ab 45
+|    responder cookie:
+|   b0 93 d9 e1  60 b0 95 f2
+|    next payload type: ISAKMP_NEXT_ID
+|    ISAKMP version: ISAKMP Version 1.0 (rfc2407)
+|    exchange type: ISAKMP_XCHG_IDPROT
+|    flags: ISAKMP_FLAG_ENCRYPTION
+|    message ID:  00 00 00 00
+| DH public value received:
+|   f6 ea 36 cd  3a 78 9b 78  60 e4 ab 7d  76 a0 b9 da
+|   33 c9 20 5a  33 56 48 2a  83 0b 75 96  51 81 a5 23
+|   80 29 cf 76  aa 78 e1 f2  de 95 8b 60  f6 92 5d 64
+|   e9 bc a2 03  56 b4 f6 69  6c 32 77 7c  cc 19 75 82
+|   22 71 c0 8c  80 32 03 f9  a6 5d 8e 89  85 4a e6 5c
+|   ef ca cc 17  53 6e ea 99  cc b8 52 57  d5 3b 1b aa
+|   98 4b 75 93  22 22 bd 1b  3a e6 b5 c4  ea ea 5d 5f
+|   00 75 d6 7a  b0 a7 9f c1  83 85 4c 18  46 0e e1 87
+| started looking for secret for 54.165.11.182->207.171.167.234 of kind PPK_PSK
+| actually looking for secret for 54.165.11.182->207.171.167.234 of kind PPK_PSK
+| line 16: key type PPK_PSK(54.165.11.182) to type PPK_PSK 
+| 1: compared key %any to 54.165.11.182 / 207.171.167.234 -> 2
+| 2: compared key %any to 54.165.11.182 / 207.171.167.234 -> 2
+| line 16: match=2 
+| best_match 0>2 best=0x7ff39ab65050 (line=16)
+| line 1: key type PPK_PSK(54.165.11.182) to type PPK_RSA 
+| concluding with best_match=2 best=0x7ff39ab65050 (lineno=16)
+| parent1 type: 7 group: 2 len: 2752 
+| 0: w->pcw_dead: 0 w->pcw_work: 0 cnt: 1
+| asking helper 0 to do compute dh+iv op on seq: 2 (len=2752, pcw_work=1)
+| crypto helper write of request: cnt=2752<wlen=2752.  
+| deleting event for #1
+| inserting event EVENT_CRYPTO_FAILED, timeout in 300 seconds for #1
+| event added after event EVENT_PENDING_PHASE2
+| complete state transition with STF_SUSPEND
+! helper 0 read 2744+4/2752 bytesfd: 6
+| * processed 0 messages from cryptographic helpers 
+! helper 0 doing compute dh+iv op id: 2
+| next event EVENT_PENDING_DDNS in 60 seconds
+| next event EVENT_PENDING_DDNS in 60 seconds
+! peer's g:   f6 ea 36 cd  3a 78 9b 78  60 e4 ab 7d  76 a0 b9 da
+! peer's g:   33 c9 20 5a  33 56 48 2a  83 0b 75 96  51 81 a5 23
+! peer's g:   80 29 cf 76  aa 78 e1 f2  de 95 8b 60  f6 92 5d 64
+! peer's g:   e9 bc a2 03  56 b4 f6 69  6c 32 77 7c  cc 19 75 82
+! peer's g:   22 71 c0 8c  80 32 03 f9  a6 5d 8e 89  85 4a e6 5c
+! peer's g:   ef ca cc 17  53 6e ea 99  cc b8 52 57  d5 3b 1b aa
+! peer's g:   98 4b 75 93  22 22 bd 1b  3a e6 b5 c4  ea ea 5d 5f
+! peer's g:   00 75 d6 7a  b0 a7 9f c1  83 85 4c 18  46 0e e1 87
+! long term secret:   4e 6f 6f 91  07 60 fc 6f  4a 27 ae 3e  99 f4 db bc
+! long term secret:   00 28 f5 98  6f 41 73 78  12 7a 23 1e  65 c6 66 03
+! calc_dh_shared(): time elapsed (OAKLEY_GROUP_MODP1024): 210 usec
+! DH shared-secret:
+!   ea 26 5c 6e  02 c3 d2 a0  d8 df 29 17  4c 6f 0d ac
+!   34 5d 19 e8  08 b6 94 cf  6c 1b 91 23  57 f3 47 a5
+!   d6 22 41 2e  80 32 01 6c  fc 9e 7a 1e  21 fe c2 56
+!   59 f7 68 9f  62 1a f3 33  02 76 1f 19  e8 ec 52 92
+!   fc 6c 7c 80  29 08 b0 05  5c a6 a2 3d  10 4a c2 0b
+!   e2 e7 ab ca  48 66 ed 47  42 f5 bd a8  b6 50 a9 88
+!   ef cd d5 ee  99 00 45 5d  7f f3 3e 30  a3 1f 27 dc
+!   e0 cc 4b 7b  2a 57 f4 58  00 0c 2f 63  66 8a 4f 84
+! Skey inputs (PSK+NI+NR)
+! ni:   12 72 ca b4  b2 26 6d c7  1a be 8c c6  59 88 47 7a
+! nr:   3e e2 9d 09  70 89 50 41  bd d6 38 7f  48 39 8c 1f
+! keyid:   1c 26 01 39  4a 75 f6 10  5a a4 dc 78  f3 47 d9 9c
+! keyid:   77 89 c5 74
+! NSS: end of key computation 
+! DH_i:  42 b7 85 49  e1 ba fd b7  78 f9 31 88  d1 a5 a1 aa
+! DH_i:  5b 64 32 1d  24 47 cf 38  3c e4 46 8b  11 10 0c ab
+! DH_i:  62 6c a4 f2  a8 de 84 04  61 60 a2 f5  66 bb c6 78
+! DH_i:  00 24 2a dd  6b 38 0b 61  ca 97 45 46  7f 37 54 ec
+! DH_i:  0c 9e c0 3a  3b bd b9 9a  ae 7c f7 89  b3 86 ac 1f
+! DH_i:  48 66 e6 f9  5e 0e b2 ee  16 55 e6 51  79 9b 81 4e
+! DH_i:  87 dd e0 7a  9e 7a 77 7a  c4 83 44 72  74 c1 05 8b
+! DH_i:  3a 34 60 9c  ea 07 e5 f9  12 42 37 cd  fe c0 11 b3
+! DH_r:  f6 ea 36 cd  3a 78 9b 78  60 e4 ab 7d  76 a0 b9 da
+! DH_r:  33 c9 20 5a  33 56 48 2a  83 0b 75 96  51 81 a5 23
+! DH_r:  80 29 cf 76  aa 78 e1 f2  de 95 8b 60  f6 92 5d 64
+! DH_r:  e9 bc a2 03  56 b4 f6 69  6c 32 77 7c  cc 19 75 82
+! DH_r:  22 71 c0 8c  80 32 03 f9  a6 5d 8e 89  85 4a e6 5c
+! DH_r:  ef ca cc 17  53 6e ea 99  cc b8 52 57  d5 3b 1b aa
+! DH_r:  98 4b 75 93  22 22 bd 1b  3a e6 b5 c4  ea ea 5d 5f
+! DH_r:  00 75 d6 7a  b0 a7 9f c1  83 85 4c 18  46 0e e1 87
+! end of IV generation 
+! Skeyid:    1c 26 01 39  4a 75 f6 10  5a a4 dc 78  f3 47 d9 9c
+! Skeyid:    77 89 c5 74
+! Skeyid_d:  b3 7a e6 ff  8e 6a e4 58  1a 1f 76 94  ac c6 53 16
+! Skeyid_d:  ed 47 24 5c
+! Skeyid_a:  6d 40 2c 79  0e a0 c0 66  0b 95 a1 cf  2e d9 f2 8d
+! Skeyid_a:  d2 96 9f 60
+! Skeyid_e:  03 cb 3e ff  cc 6f 12 dd  51 ba 07 78  53 7b bd fd
+! Skeyid_e:  06 58 c9 ed
+!enckey:03cb3effcc6f12dd51ba0778537bbdfd
+! IV:  3a ef 7f ab  fb 0d 55 79  48 19 bd 27  b4 89 71 a2
+! IV:  33 35 68 59
+
+========================================================================
+PHASE 1 IDENTIFICATION - MESSAGE 5
+========================================================================
+
+|  
+| helper 0 has finished work (cnt now 1)
+| helper 0 replies to id: q#2
+| calling callback function 0x7ff3992cda90
+| main inR2_outI3: calculated DH, sending R1
+| processing connection awslegacyvpn
+| thinking about whether to send my certificate:
+|   I have RSA key: OAKLEY_PRESHARED_KEY cert.type: CERT_NONE 
+|   sendcert: CERT_ALWAYSSEND and I did not get a certificate request 
+|   so do not send cert.
+| I did not send a certificate because digital signatures are not being used. (PSK)
+|  I am not sending a certificate request
+| ***emit ISAKMP Identification Payload (IPsec DOI):
+|    next payload type: ISAKMP_NEXT_HASH
+|    ID type: ID_IPV4_ADDR
+|    Protocol ID: 0
+|    port: 0
+| emitting 4 raw bytes of my identity into ISAKMP Identification Payload (IPsec DOI)
+| my identity  36 a5 0b b6
+| emitting length of ISAKMP Identification Payload (IPsec DOI): 12
+| hashing 52 bytes of SA
+| ***emit ISAKMP Hash Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+| emitting 20 raw bytes of HASH_I into ISAKMP Hash Payload
+| HASH_I  a2 1d 61 11  5d 8f c2 30  2d 59 57 ec  cc 6a 80 1f
+| HASH_I  4f bc 81 54
+| emitting length of ISAKMP Hash Payload: 24
+| encrypting:
+|   08 00 00 0c  01 00 00 00  36 a5 0b b6  00 00 00 18
+|   a2 1d 61 11  5d 8f c2 30  2d 59 57 ec  cc 6a 80 1f
+|   4f bc 81 54
+| IV:
+|   3a ef 7f ab  fb 0d 55 79  48 19 bd 27  b4 89 71 a2
+|   33 35 68 59
+| unpadded size is: 36
+| emitting 12 zero bytes of encryption padding into ISAKMP Message
+| encrypting 48 using OAKLEY_AES_CBC
+| next IV:  94 0b cf 18  c8 ed dc a4  a3 38 88 a5  88 90 59 32
+| emitting length of ISAKMP Message: 76
+| complete state transition with STF_OK
+"awslegacyvpn" #1: transition from state STATE_MAIN_I2 to state STATE_MAIN_I3
+| deleting event for #1
+| sending reply packet to 207.171.167.234:500 (from port 500)
+| sending 76 bytes for STATE_MAIN_I2 through eth0:500 to 207.171.167.234:500 (using #1)
+|   82 b6 5d 31  50 15 ab 45  b0 93 d9 e1  60 b0 95 f2
+|   05 10 02 01  00 00 00 00  00 00 00 4c  e1 01 40 d9
+|   47 fc 67 9f  9b 0b 46 34  2b a9 10 8a  df 92 8e 99
+|   3c f2 37 58  5b 8b 86 3f  c9 17 83 fd  94 0b cf 18
+|   c8 ed dc a4  a3 38 88 a5  88 90 59 32
+| inserting event EVENT_RETRANSMIT, timeout in 10 seconds for #1
+| event added at head of queue
+"awslegacyvpn" #1: STATE_MAIN_I3: sent MI3, expecting MR3
+| modecfg pull: noquirk policy:push not-client
+| phase 1 is done, looking for phase 2 to unpend
+| * processed 1 messages from cryptographic helpers 
+| next event EVENT_RETRANSMIT in 10 seconds for #1
+| next event EVENT_RETRANSMIT in 10 seconds for #1
+|  
+========================================================================
+PHASE 1 RECEIVING IDENTIFICATION FROM PEER - MESSAGE 6
+========================================================================
+| *received 76 bytes from 207.171.167.234:500 on eth0 (port=500)
+|   82 b6 5d 31  50 15 ab 45  b0 93 d9 e1  60 b0 95 f2
+|   05 10 02 01  00 00 00 00  00 00 00 4c  54 cb 58 47
+|   20 f3 42 41  4f 90 0c 04  13 af b5 fa  88 32 0b cd
+|   91 24 3d 56  7d 85 ff 1d  71 32 43 cf  9f e0 da dd
+|   18 73 35 ac  68 be 40 02  5b 92 7a c3
+| **parse ISAKMP Message:
+|    initiator cookie:
+|   82 b6 5d 31  50 15 ab 45
+|    responder cookie:
+|   b0 93 d9 e1  60 b0 95 f2
+|    next payload type: ISAKMP_NEXT_ID
+|    ISAKMP version: ISAKMP Version 1.0 (rfc2407)
+|    exchange type: ISAKMP_XCHG_IDPROT
+|    flags: ISAKMP_FLAG_ENCRYPTION
+|    message ID:  00 00 00 00
+|    length: 76
+|  processing version=1.0 packet with exchange type=ISAKMP_XCHG_IDPROT (2)
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  b0 93 d9 e1  60 b0 95 f2
+| state hash entry 31
+| v1 peer and cookies match on #1, provided msgid 00000000 vs 00000000
+| v1 state object #1 found, in STATE_MAIN_I3
+| processing connection awslegacyvpn
+| received encrypted packet from 207.171.167.234:500
+| decrypting 48 bytes using algorithm OAKLEY_AES_CBC
+| decrypted:
+|   08 00 00 0c  01 00 00 00  cf ab a7 ea  00 00 00 18
+|   8f f4 58 db  7d 11 24 f0  8c 5e 32 db  d9 25 de 1c
+|   69 6d 21 eb  00 00 00 00  00 00 00 00  00 00 00 00
+| next IV:  9f e0 da dd  18 73 35 ac  68 be 40 02  5b 92 7a c3
+| got payload 0x20(ISAKMP_NEXT_ID) needed: 0x120 opt: 0x2080
+| ***parse ISAKMP Identification Payload:
+|    next payload type: ISAKMP_NEXT_HASH
+|    length: 12
+|    ID type: ID_IPV4_ADDR
+|    DOI specific A: 0
+|    DOI specific B: 0
+|      obj:   cf ab a7 ea
+| got payload 0x100(ISAKMP_NEXT_HASH) needed: 0x100 opt: 0x2080
+| ***parse ISAKMP Hash Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+|    length: 24
+| removing 12 bytes of padding
+"awslegacyvpn" #1: Main mode peer ID is ID_IPV4_ADDR: '207.171.167.234'
+| hashing 52 bytes of SA
+| authentication succeeded
+| complete state transition with STF_OK
+"awslegacyvpn" #1: transition from state STATE_MAIN_I3 to state STATE_MAIN_I4
+| deleting event for #1
+| inserting event EVENT_SA_REPLACE, timeout in 28044 seconds for #1
+| event added after event EVENT_REINIT_SECRET
+
+================
+"awslegacyvpn" #1: STATE_MAIN_I4: ISAKMP SA established {auth=OAKLEY_PRESHARED_KEY cipher=aes_128 prf=oakley_sha group=modp1024}
+================
+
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  b0 93 d9 e1  60 b0 95 f2
+| state hash entry 31
+| v1 peer and cookies match on #1, provided msgid 00000000 vs 00000000
+| v1 state object #1 found, in STATE_MAIN_I4
+"awslegacyvpn" #1: Dead Peer Detection (RFC 3706): enabled
+| state: 1 requesting event none to be deleted by /home/ec2-user/openswan-2.6.43/programs/pluto/dpd.c:168
+| inserting event EVENT_DPD, timeout in 10 seconds for #1
+| event added at head of queue
+| modecfg pull: noquirk policy:push not-client
+| phase 1 is done, looking for phase 2 to unpend
+| unpending state #1
+| unqueuing pending Quick Mode with 207.171.167.234 "awslegacyvpn" import:admin initiate
+| duplicating state object #1
+| creating state object #2 at 0x7ff39ab67a30
+| processing connection awslegacyvpn
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  b0 93 d9 e1  60 b0 95 f2
+| state hash entry 31
+| inserting state object #2
+| inserting event EVENT_SO_DISCARD, timeout in 0 seconds for #2
+| event added at head of queue
+| kernel_alg_esp_enc_ok(12,0): alg_id=12, alg_ivlen=8, alg_minbits=128, alg_maxbits=256, res=0, ret=1
+| kernel_alg_esp_auth_keylen(auth=2, sadb_aalg=3): a_keylen=20
+
+
+
+========================================================================
+PHASE 2 Quick mode - Message 1
+========================================================================
+
+
+"awslegacyvpn" #2: initiating Quick Mode PSK+ENCRYPT+TUNNEL+PFS+UP+SAREFTRACK {using isakmp#1 msgid:0faa7248 proposal=AES(12)_128-SHA1(2)_160 pfsgroup=OAKLEY_GROUP_MODP1024}
+| 0: w->pcw_dead: 0 w->pcw_work: 0 cnt: 1
+| asking helper 0 to do build_kenonce op on seq: 3 (len=2752, pcw_work=1)
+| crypto helper write of request: cnt=2752<wlen=2752.  
+| deleting event for #2
+| inserting event EVENT_CRYPTO_FAILED, timeout in 300 seconds for #2
+! helper 0 read 2744+4/2752 bytesfd: 6
+| event added after event EVENT_PENDING_PHASE2
+! helper 0 doing build_kenonce op id: 3
+| removing pending policy for "none" {0x7ff39ab64780}
+| * processed 0 messages from cryptographic helpers 
+| next event EVENT_DPD in 10 seconds for #1
+| next event EVENT_DPD in 10 seconds for #1
+! Local DH secret:
+!   ed cc ba 30  43 84 4c c6  d5 43 ec 73  b6 e6 1a 72
+!   f7 e5 50 bd  1c 62 01 eb  1f 34 42 82  b6 65 cd e1
+! Public DH value sent:
+!   a2 32 32 85  d0 22 c7 c2  9f 9d 47 c9  e1 d3 e7 c1
+!   17 03 6b b4  ee 97 f8 59  b6 d4 5f 40  a8 7a 4d f0
+!   2b 5e 38 91  40 a2 65 29  ed 88 dc 45  86 b9 1c a4
+!   73 ca 2e 88  30 d9 95 6b  06 47 04 c1  68 56 d5 cd
+!   29 8a 0c 39  4d fd 9b 59  c9 91 a1 dd  96 6f f6 79
+!   0f 07 56 c3  e7 dc bf 2d  c2 5a b8 23  ac 42 9b e3
+!   84 58 b7 33  9a eb 74 73  96 12 9b e6  37 36 9c ef
+!   d6 ff 78 89  e7 7c 4d b9  6a 5a b9 d8  60 72 b9 ac
+! Generated nonce:
+!   cc b5 96 a5  27 38 23 18  71 65 91 7d  58 8e 48 81
+|  
+| helper 0 has finished work (cnt now 1)
+| helper 0 replies to id: q#3
+| calling callback function 0x7ff3992d5410
+| quick outI1: calculated ke+nonce, sending I1
+| processing connection awslegacyvpn
+| **emit ISAKMP Message:
+|    initiator cookie:
+|   82 b6 5d 31  50 15 ab 45
+|    responder cookie:
+|   b0 93 d9 e1  60 b0 95 f2
+|    next payload type: ISAKMP_NEXT_HASH
+|    ISAKMP version: ISAKMP Version 1.0 (rfc2407)
+|    exchange type: ISAKMP_XCHG_QUICK
+|    flags: ISAKMP_FLAG_ENCRYPTION
+|    message ID:  48 72 aa 0f
+| ***emit ISAKMP Hash Payload:
+|    next payload type: ISAKMP_NEXT_SA
+| emitting 20 zero bytes of HASH into ISAKMP Hash Payload
+| emitting length of ISAKMP Hash Payload: 24
+| kernel_alg_db_new() initial trans_cnt=128
+| kernel_alg_db_new() will return p_new->protoid=3, p_new->trans_cnt=1
+| kernel_alg_db_new()     trans[0]: transid=12, attr_cnt=2, attrs[0].type=5, attrs[0].val=2
+| returning new proposal from esp_info
+| ***emit ISAKMP Security Association Payload:
+|    next payload type: ISAKMP_NEXT_NONCE
+|    DOI: ISAKMP_DOI_IPSEC
+| ****emit IPsec DOI SIT:
+|    IPsec DOI SIT: SIT_IDENTITY_ONLY
+| out_sa pcn: 0 has 1 valid proposals
+| out_sa pcn: 0 pn: 0<1 valid_count: 1 trans_cnt: 1
+| ****emit ISAKMP Proposal Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+|    proposal number: 0
+|    protocol ID: PROTO_IPSEC_ESP
+|    SPI size: 4
+|    number of transforms: 1
+| netlink_get_spi: allocated 0x7e996750 for esp.0@10.0.0.233
+| emitting 4 raw bytes of SPI into ISAKMP Proposal Payload
+| SPI  7e 99 67 50
+| *****emit ISAKMP Transform Payload (ESP):
+|    next payload type: ISAKMP_NEXT_NONE
+|    transform number: 0
+|    transform ID: ESP_AES
+| ******emit ISAKMP IPsec DOI attribute:
+|    af+type: GROUP_DESCRIPTION
+|    length/value: 2
+|     [2 is OAKLEY_GROUP_MODP1024]
+| ******emit ISAKMP IPsec DOI attribute:
+|    af+type: ENCAPSULATION_MODE
+|    length/value: 1
+|     [1 is ENCAPSULATION_MODE_TUNNEL]
+| ******emit ISAKMP IPsec DOI attribute:
+|    af+type: SA_LIFE_TYPE
+|    length/value: 1
+|     [1 is SA_LIFE_TYPE_SECONDS]
+| ******emit ISAKMP IPsec DOI attribute:
+|    af+type: SA_LIFE_DURATION
+|    length/value: 3600
+| ******emit ISAKMP IPsec DOI attribute:
+|    af+type: AUTH_ALGORITHM
+|    length/value: 2
+|     [2 is AUTH_ALGORITHM_HMAC_SHA1]
+| ******emit ISAKMP IPsec DOI attribute:
+|    af+type: KEY_LENGTH
+|    length/value: 128
+| emitting length of ISAKMP Transform Payload (ESP): 32
+| emitting length of ISAKMP Proposal Payload: 44
+| emitting length of ISAKMP Security Association Payload: 56
+| ***emit ISAKMP Nonce Payload:
+|    next payload type: ISAKMP_NEXT_KE
+| emitting 16 raw bytes of Ni into ISAKMP Nonce Payload
+| Ni  cc b5 96 a5  27 38 23 18  71 65 91 7d  58 8e 48 81
+| emitting length of ISAKMP Nonce Payload: 20
+| ***emit ISAKMP Key Exchange Payload:
+|    next payload type: ISAKMP_NEXT_ID
+| emitting 128 raw bytes of keyex value into ISAKMP Key Exchange Payload
+| keyex value  a2 32 32 85  d0 22 c7 c2  9f 9d 47 c9  e1 d3 e7 c1
+| keyex value  17 03 6b b4  ee 97 f8 59  b6 d4 5f 40  a8 7a 4d f0
+| keyex value  2b 5e 38 91  40 a2 65 29  ed 88 dc 45  86 b9 1c a4
+| keyex value  73 ca 2e 88  30 d9 95 6b  06 47 04 c1  68 56 d5 cd
+| keyex value  29 8a 0c 39  4d fd 9b 59  c9 91 a1 dd  96 6f f6 79
+| keyex value  0f 07 56 c3  e7 dc bf 2d  c2 5a b8 23  ac 42 9b e3
+| keyex value  84 58 b7 33  9a eb 74 73  96 12 9b e6  37 36 9c ef
+| keyex value  d6 ff 78 89  e7 7c 4d b9  6a 5a b9 d8  60 72 b9 ac
+| emitting length of ISAKMP Key Exchange Payload: 132
+| ***emit ISAKMP Identification Payload (IPsec DOI):
+|    next payload type: ISAKMP_NEXT_ID
+|    ID type: ID_IPV4_ADDR_SUBNET
+|    Protocol ID: 0
+|    port: 0
+| emitting 4 raw bytes of client network into ISAKMP Identification Payload (IPsec DOI)
+| client network  0a 00 00 00
+| emitting 4 raw bytes of client mask into ISAKMP Identification Payload (IPsec DOI)
+| client mask  ff ff 00 00
+| emitting length of ISAKMP Identification Payload (IPsec DOI): 16
+| ***emit ISAKMP Identification Payload (IPsec DOI):
+|    next payload type: ISAKMP_NEXT_NONE
+|    ID type: ID_IPV4_ADDR_SUBNET
+|    Protocol ID: 0
+|    port: 0
+| emitting 4 raw bytes of client network into ISAKMP Identification Payload (IPsec DOI)
+| client network  ac 1f 00 00
+| emitting 4 raw bytes of client mask into ISAKMP Identification Payload (IPsec DOI)
+| client mask  ff ff 00 00
+| emitting length of ISAKMP Identification Payload (IPsec DOI): 16
+| HASH(1) computed:
+|   2f ac 28 58  4a ac 26 9c  03 4c e5 3b  73 a6 06 79
+|   a0 4c 9e 38
+| last Phase 1 IV:  9f e0 da dd  18 73 35 ac  68 be 40 02  5b 92 7a c3
+| current Phase 1 IV:  9f e0 da dd  18 73 35 ac  68 be 40 02  5b 92 7a c3
+| computed Phase 2 IV:
+|   fc fe 53 2c  ab 4b b2 3d  3e 28 4d 46  f3 e4 25 c6
+|   23 87 d7 ed
+| encrypting:
+|   01 00 00 18  2f ac 28 58  4a ac 26 9c  03 4c e5 3b
+|   73 a6 06 79  a0 4c 9e 38  0a 00 00 38  00 00 00 01
+|   00 00 00 01  00 00 00 2c  00 03 04 01  7e 99 67 50
+|   00 00 00 20  00 0c 00 00  80 03 00 02  80 04 00 01
+|   80 01 00 01  80 02 0e 10  80 05 00 02  80 06 00 80
+|   04 00 00 14  cc b5 96 a5  27 38 23 18  71 65 91 7d
+|   58 8e 48 81  05 00 00 84  a2 32 32 85  d0 22 c7 c2
+|   9f 9d 47 c9  e1 d3 e7 c1  17 03 6b b4  ee 97 f8 59
+|   b6 d4 5f 40  a8 7a 4d f0  2b 5e 38 91  40 a2 65 29
+|   ed 88 dc 45  86 b9 1c a4  73 ca 2e 88  30 d9 95 6b
+|   06 47 04 c1  68 56 d5 cd  29 8a 0c 39  4d fd 9b 59
+|   c9 91 a1 dd  96 6f f6 79  0f 07 56 c3  e7 dc bf 2d
+|   c2 5a b8 23  ac 42 9b e3  84 58 b7 33  9a eb 74 73
+|   96 12 9b e6  37 36 9c ef  d6 ff 78 89  e7 7c 4d b9
+|   6a 5a b9 d8  60 72 b9 ac  05 00 00 10  04 00 00 00
+|   0a 00 00 00  ff ff 00 00  00 00 00 10  04 00 00 00
+|   ac 1f 00 00  ff ff 00 00
+| IV:
+|   fc fe 53 2c  ab 4b b2 3d  3e 28 4d 46  f3 e4 25 c6
+|   23 87 d7 ed
+| unpadded size is: 264
+| emitting 8 zero bytes of encryption padding into ISAKMP Message
+| encrypting 272 using OAKLEY_AES_CBC
+| next IV:  60 f1 42 39  a7 8d 3f b8  c1 92 41 ec  1a 7f 5a a9
+| emitting length of ISAKMP Message: 300
+| sending 300 bytes for quick_outI1 through eth0:500 to 207.171.167.234:500 (using #2)
+|   82 b6 5d 31  50 15 ab 45  b0 93 d9 e1  60 b0 95 f2
+|   08 10 20 01  48 72 aa 0f  00 00 01 2c  e4 3d 3c 7b
+|   06 d8 a0 0a  8f 3e 31 63  c5 35 7f 8d  ca 5e 47 2c
+|   de 5c 2a 24  b8 87 c5 c9  74 67 a4 83  07 b5 a9 ad
+|   22 6a d2 2e  f2 29 cf 6a  ab f3 94 26  e1 67 9e b8
+|   e1 94 14 63  0e 5e 81 4b  49 73 d4 f8  fb 9b 3d 80
+|   bc 40 6f de  e0 0d 7a 75  28 c0 db 8e  4f ac e6 f5
+|   5a b1 55 b5  10 00 6b 74  76 a7 b3 5b  50 5c 0c ee
+|   b5 ec 42 41  77 a2 51 4f  62 94 e4 3c  2e 60 b4 79
+|   c9 67 3e f9  d2 b4 01 27  1b 16 90 e6  42 43 f3 e6
+|   b8 30 13 c6  a7 f1 b6 6a  24 da e1 32  db 0a 64 b6
+|   a6 73 04 fc  98 cb 4b 8d  7f 33 84 33  af 8b b5 6d
+|   ff 01 9f 1f  7a f9 37 65  fc 8d 48 ad  dc c5 58 cf
+|   29 c1 03 1a  33 80 28 11  9c 75 96 4c  14 e3 1a 03
+|   87 84 4b ee  63 a2 b3 d8  35 92 09 73  b9 ad 8d fd
+|   f3 ec 64 48  33 bc 48 5d  42 65 9b b4  bf 1e 94 69
+|   74 a4 aa 34  25 9f 69 86  d6 5c 10 90  76 b1 f0 d5
+|   1f 7c 58 a4  9f 5f 60 02  d9 8a d1 60  60 f1 42 39
+|   a7 8d 3f b8  c1 92 41 ec  1a 7f 5a a9
+| deleting event for #2
+| inserting event EVENT_RETRANSMIT, timeout in 10 seconds for #2
+| event added at head of queue
+| * processed 1 messages from cryptographic helpers 
+| next event EVENT_RETRANSMIT in 10 seconds for #2
+| next event EVENT_RETRANSMIT in 10 seconds for #2
+| 
+
+
+========================================================================
+PHASE 2 - QA Setup - Message from peer - Message 2
+========================================================================
+
+
+ 
+| *received 300 bytes from 207.171.167.234:500 on eth0 (port=500)
+|   82 b6 5d 31  50 15 ab 45  b0 93 d9 e1  60 b0 95 f2
+|   08 10 20 01  48 72 aa 0f  00 00 01 2c  4f c3 ed 8b
+|   b9 34 fc 80  a4 c4 04 78  e0 15 72 76  bf 18 88 bb
+|   21 77 92 d1  62 0a 39 ec  7c d5 e6 5d  80 63 e8 3e
+|   c9 66 31 11  99 d5 2b 9a  73 97 ed d5  15 37 3b 0f
+|   77 6f 12 a0  2b d2 f6 5b  cc 30 3d 04  48 61 9b aa
+|   3c b7 b6 cf  73 d0 55 f5  99 21 c7 98  98 46 eb d5
+|   e9 90 98 a5  5f 54 3d f5  e8 9c 74 ff  1a c8 aa 0d
+|   01 6d af 5d  5d ca 9f fa  fe 90 84 0f  ec 41 65 b7
+|   47 cf 33 e3  4b 33 4a b6  17 71 0f 6c  eb f0 c0 c4
+|   a1 6d ae b7  7c 3a 70 41  6b 0f d6 a7  b3 b7 c3 42
+|   bb b8 fd bb  f6 54 eb 8d  99 a5 b9 e7  76 b1 69 db
+|   65 a2 17 66  41 95 45 10  0f fb 88 39  e9 65 48 0f
+|   c1 ea ee 31  dc 96 c8 e1  b3 dd 23 ef  bb b1 52 72
+|   13 92 e1 13  5b be 74 6a  b0 f9 27 47  dd 3b 49 30
+|   e5 1a a1 24  cc a5 ef f3  4c f0 db 2f  86 af 1e c5
+|   19 96 ac ae  8f 8c bf 86  4c fa cd 4e  73 96 67 86
+|   bb 95 f5 29  d3 e5 70 08  a7 31 a7 c1  54 d5 50 5f
+|   b6 f9 d9 fd  76 14 d3 c3  7d f6 c6 8e
+| **parse ISAKMP Message:
+|    initiator cookie:
+|   82 b6 5d 31  50 15 ab 45
+|    responder cookie:
+|   b0 93 d9 e1  60 b0 95 f2
+|    next payload type: ISAKMP_NEXT_HASH
+|    ISAKMP version: ISAKMP Version 1.0 (rfc2407)
+|    exchange type: ISAKMP_XCHG_QUICK
+|    flags: ISAKMP_FLAG_ENCRYPTION
+|    message ID:  48 72 aa 0f
+|    length: 300
+|  processing version=1.0 packet with exchange type=ISAKMP_XCHG_QUICK (32)
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  b0 93 d9 e1  60 b0 95 f2
+| state hash entry 31
+| v1 peer and cookies match on #2, provided msgid 4872aa0f vs 4872aa0f
+| v1 state object #2 found, in STATE_QUICK_I1
+| processing connection awslegacyvpn
+| received encrypted packet from 207.171.167.234:500
+| decrypting 272 bytes using algorithm OAKLEY_AES_CBC
+| decrypted:
+|   01 00 00 18  47 de 9b 7a  51 e5 5a 95  6c 4b 9d 61
+|   b8 cb 1e 0d  4d d4 c7 1c  0a 00 00 38  00 00 00 01
+|   00 00 00 01  00 00 00 2c  00 03 04 01  de e4 d1 d8
+|   00 00 00 20  00 0c 00 00  80 03 00 02  80 04 00 01
+|   80 01 00 01  80 02 0e 10  80 05 00 02  80 06 00 80
+|   04 00 00 14  76 dd fa 5b  3e 73 e2 fc  3d a1 7f 9f
+|   43 53 be 40  05 00 00 84  a1 77 5f a5  55 73 8b c8
+|   1e ae de f8  e9 7a b2 58  27 d2 74 c5  84 a2 74 03
+|   f1 9b 9b 15  4a f6 36 df  18 9a 74 74  0a 38 47 db
+|   c8 69 f7 16  74 30 77 f9  2f cc 79 04  be a5 b7 67
+|   2c f8 e5 fc  7e ca f6 ab  43 38 15 3b  42 87 cb ee
+|   af 7b a4 c9  a9 ab 45 48  f3 94 43 9e  9f 08 96 8b
+|   7d 7f 24 4a  ff 9d 74 24  30 da bc 54  a5 79 69 55
+|   42 c3 63 31  76 bf ad f4  f6 26 85 b4  45 48 e3 d4
+|   96 dd ec ee  bb e5 ca ad  05 00 00 10  04 00 00 00
+|   0a 00 00 00  ff ff 00 00  00 00 00 10  04 00 00 00
+|   ac 1f 00 00  ff ff 00 00  00 00 00 00  00 00 00 00
+| next IV:  54 d5 50 5f  b6 f9 d9 fd  76 14 d3 c3  7d f6 c6 8e
+| got payload 0x100(ISAKMP_NEXT_HASH) needed: 0x502 opt: 0x200030
+| ***parse ISAKMP Hash Payload:
+|    next payload type: ISAKMP_NEXT_SA
+|    length: 24
+| got payload 0x2(ISAKMP_NEXT_SA) needed: 0x402 opt: 0x200030
+| ***parse ISAKMP Security Association Payload:
+|    next payload type: ISAKMP_NEXT_NONCE
+|    length: 56
+|    DOI: ISAKMP_DOI_IPSEC
+| got payload 0x400(ISAKMP_NEXT_NONCE) needed: 0x400 opt: 0x200030
+| ***parse ISAKMP Nonce Payload:
+|    next payload type: ISAKMP_NEXT_KE
+|    length: 20
+| got payload 0x10(ISAKMP_NEXT_KE) needed: 0x0 opt: 0x200030
+| ***parse ISAKMP Key Exchange Payload:
+|    next payload type: ISAKMP_NEXT_ID
+|    length: 132
+| got payload 0x20(ISAKMP_NEXT_ID) needed: 0x0 opt: 0x200030
+| ***parse ISAKMP Identification Payload (IPsec DOI):
+|    next payload type: ISAKMP_NEXT_ID
+|    length: 16
+|    ID type: ID_IPV4_ADDR_SUBNET
+|    Protocol ID: 0
+|    port: 0
+|      obj:   0a 00 00 00  ff ff 00 00
+| got payload 0x20(ISAKMP_NEXT_ID) needed: 0x0 opt: 0x200030
+| ***parse ISAKMP Identification Payload (IPsec DOI):
+|    next payload type: ISAKMP_NEXT_NONE
+|    length: 16
+|    ID type: ID_IPV4_ADDR_SUBNET
+|    Protocol ID: 0
+|    port: 0
+|      obj:   ac 1f 00 00  ff ff 00 00
+| removing 8 bytes of padding
+| **emit ISAKMP Message:
+|    initiator cookie:
+|   82 b6 5d 31  50 15 ab 45
+|    responder cookie:
+|   b0 93 d9 e1  60 b0 95 f2
+|    next payload type: ISAKMP_NEXT_HASH
+|    ISAKMP version: ISAKMP Version 1.0 (rfc2407)
+|    exchange type: ISAKMP_XCHG_QUICK
+|    flags: ISAKMP_FLAG_ENCRYPTION
+|    message ID:  48 72 aa 0f
+| HASH(2) computed:
+|   47 de 9b 7a  51 e5 5a 95  6c 4b 9d 61  b8 cb 1e 0d
+|   4d d4 c7 1c
+| ****parse IPsec DOI SIT:
+|    IPsec DOI SIT: SIT_IDENTITY_ONLY
+| ****parse ISAKMP Proposal Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+|    length: 44
+|    proposal number: 0
+|    protocol ID: PROTO_IPSEC_ESP
+|    SPI size: 4
+|    number of transforms: 1
+| parsing 4 raw bytes of ISAKMP Proposal Payload into SPI
+| SPI  de e4 d1 d8
+| *****parse ISAKMP Transform Payload (ESP):
+|    next payload type: ISAKMP_NEXT_NONE
+|    length: 32
+|    transform number: 0
+|    transform ID: ESP_AES
+| ******parse ISAKMP IPsec DOI attribute:
+|    af+type: GROUP_DESCRIPTION
+|    length/value: 2
+|    [2 is OAKLEY_GROUP_MODP1024]
+| ******parse ISAKMP IPsec DOI attribute:
+|    af+type: ENCAPSULATION_MODE
+|    length/value: 1
+|    [1 is ENCAPSULATION_MODE_TUNNEL]
+| ******parse ISAKMP IPsec DOI attribute:
+|    af+type: SA_LIFE_TYPE
+|    length/value: 1
+|    [1 is SA_LIFE_TYPE_SECONDS]
+| ******parse ISAKMP IPsec DOI attribute:
+|    af+type: SA_LIFE_DURATION
+|    length/value: 3600
+| ******parse ISAKMP IPsec DOI attribute:
+|    af+type: AUTH_ALGORITHM
+|    length/value: 2
+|    [2 is AUTH_ALGORITHM_HMAC_SHA1]
+| ******parse ISAKMP IPsec DOI attribute:
+|    af+type: KEY_LENGTH
+|    length/value: 128
+| kernel_alg_esp_enc_ok(12,128): alg_id=12, alg_ivlen=8, alg_minbits=128, alg_maxbits=256, res=0, ret=1
+| DH public value received:
+|   a1 77 5f a5  55 73 8b c8  1e ae de f8  e9 7a b2 58
+|   27 d2 74 c5  84 a2 74 03  f1 9b 9b 15  4a f6 36 df
+|   18 9a 74 74  0a 38 47 db  c8 69 f7 16  74 30 77 f9
+|   2f cc 79 04  be a5 b7 67  2c f8 e5 fc  7e ca f6 ab
+|   43 38 15 3b  42 87 cb ee  af 7b a4 c9  a9 ab 45 48
+|   f3 94 43 9e  9f 08 96 8b  7d 7f 24 4a  ff 9d 74 24
+|   30 da bc 54  a5 79 69 55  42 c3 63 31  76 bf ad f4
+|   f6 26 85 b4  45 48 e3 d4  96 dd ec ee  bb e5 ca ad
+| started looking for secret for 54.165.11.182->207.171.167.234 of kind PPK_PSK
+| actually looking for secret for 54.165.11.182->207.171.167.234 of kind PPK_PSK
+| line 16: key type PPK_PSK(54.165.11.182) to type PPK_PSK 
+| 1: compared key %any to 54.165.11.182 / 207.171.167.234 -> 2
+| 2: compared key %any to 54.165.11.182 / 207.171.167.234 -> 2
+| line 16: match=2 
+| best_match 0>2 best=0x7ff39ab65050 (line=16)
+| line 1: key type PPK_PSK(54.165.11.182) to type PPK_RSA 
+| concluding with best_match=2 best=0x7ff39ab65050 (lineno=16)
+| 0: w->pcw_dead: 0 w->pcw_work: 0 cnt: 1
+| asking helper 0 to do compute dh(p2) op on seq: 4 (len=2752, pcw_work=1)
+| crypto helper write of request: cnt=2752<wlen=2752.  
+| deleting event for #2
+| inserting event EVENT_CRYPTO_FAILED, timeout in 300 seconds for #2
+| event added after event EVENT_PENDING_PHASE2
+| complete state transition with STF_SUSPEND
+| * processed 0 messages from cryptographic helpers 
+| next event EVENT_DPD in 10 seconds for #1
+| next event EVENT_DPD in 10 seconds for #1
+! helper 0 read 2744+4/2752 bytesfd: 6
+! helper 0 doing compute dh(p2) op id: 4
+! peer's g:   a1 77 5f a5  55 73 8b c8  1e ae de f8  e9 7a b2 58
+! peer's g:   27 d2 74 c5  84 a2 74 03  f1 9b 9b 15  4a f6 36 df
+! peer's g:   18 9a 74 74  0a 38 47 db  c8 69 f7 16  74 30 77 f9
+! peer's g:   2f cc 79 04  be a5 b7 67  2c f8 e5 fc  7e ca f6 ab
+! peer's g:   43 38 15 3b  42 87 cb ee  af 7b a4 c9  a9 ab 45 48
+! peer's g:   f3 94 43 9e  9f 08 96 8b  7d 7f 24 4a  ff 9d 74 24
+! peer's g:   30 da bc 54  a5 79 69 55  42 c3 63 31  76 bf ad f4
+! peer's g:   f6 26 85 b4  45 48 e3 d4  96 dd ec ee  bb e5 ca ad
+! calc_dh_shared(): time elapsed (OAKLEY_GROUP_MODP1024): 206 usec
+! DH shared-secret:
+!   1e 11 bb 84  f5 bc 88 2d  cf 24 f5 4b  f6 2c 9f e9
+!   b4 cf 6b a4  a3 f4 82 ff  97 30 d2 44  5f 34 45 8a
+!   5f 87 e4 0f  c3 88 ce 14  95 85 22 5f  0d 45 79 03
+!   7c c8 ed 71  d3 2d 2b 3b  dd 39 fd 43  d8 cd d5 2c
+!   1b eb a9 13  d1 76 e6 8a  d6 09 af fd  62 c5 6f 5e
+!   42 99 66 e5  fe 36 06 7f  86 31 bf 41  a4 4a 11 82
+!   0f 5c f0 bd  31 39 6b 2b  9c 05 09 a1  a4 9b 59 df
+!   d9 78 b4 e0  77 47 5a b3  da 25 1d 91  ee fc a5 e6
+|  
+| helper 0 has finished work (cnt now 1)
+| helper 0 replies to id: q#4
+| calling callback function 0x7ff3992d50d0
+| quick inI1_outR1: calculated ke+nonce, calculating DH
+| processing connection awslegacyvpn
+| our client is subnet 10.0.0.0/16
+| our client protocol/port is 0/0
+| peer client is subnet 172.31.0.0/16
+| peer client protocol/port is 0/0
+| ***emit ISAKMP Hash Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+| emitting 20 zero bytes of HASH into ISAKMP Hash Payload
+| emitting length of ISAKMP Hash Payload: 24
+| HASH(3) computed:  d8 55 9e df  cc 19 25 bb  cf c1 2f 4e  3d 53 16 83
+| HASH(3) computed:  9c a8 01 24
+| compute_proto_keymat:needed_len (after ESP enc)=16
+| compute_proto_keymat:needed_len (after ESP auth)=36
+| ESP KEYMAT 
+|   KEYMAT computed:
+|   c5 f7 55 c8  b4 08 9f 37  15 8d cf f7  7b c4 12 32
+|   59 04 97 55  e3 e4 f0 37  47 ee 82 b6  02 9a 01 be
+|   9d 6f 0f 39
+|   Peer KEYMAT computed:
+|   47 94 49 b8  67 b9 4d 94  1b 83 55 73  ca b7 20 b1
+|   6a 84 f3 4b  d8 bd 68 90  a3 3e 81 45  bb ca 70 df
+|   9a 43 c4 0e
+| install_ipsec_sa() for #2: inbound and outbound
+| route owner of "awslegacyvpn" prospective erouted: self; eroute owner: self
+| could_route called for awslegacyvpn (kind=CK_PERMANENT)
+| looking for outbound alg with transid: 12 keylen: 128 auth: 2 
+| checking transid: 11 keylen: 0 auth: 1 
+| checking transid: 11 keylen: 0 auth: 2 
+| checking transid: 2 keylen: 8 auth: 0 
+| checking transid: 2 keylen: 8 auth: 1 
+| checking transid: 2 keylen: 8 auth: 2 
+| checking transid: 3 keylen: 24 auth: 0 
+| checking transid: 3 keylen: 24 auth: 1 
+| checking transid: 3 keylen: 24 auth: 2 
+| checking transid: 12 keylen: 16 auth: 0 
+| checking transid: 12 keylen: 16 auth: 1 
+| checking transid: 12 keylen: 16 auth: 2 
+|esp%senckey:479449b867b94d941b835573cab720b1
+|esp%sauthkey:6a84f34bd8bd6890a33e8145bbca70df9a43c40e
+|   using old struct xfrm_algo for XFRM message
+| set up outgoing SA, ref=0/4294901761
+| looking for inbound alg with transid: 12 keylen: 128 auth: 2 
+| checking transid: 11 keylen: 0 auth: 1 
+| checking transid: 11 keylen: 0 auth: 2 
+| checking transid: 2 keylen: 8 auth: 0 
+| checking transid: 2 keylen: 8 auth: 1 
+| checking transid: 2 keylen: 8 auth: 2 
+| checking transid: 3 keylen: 24 auth: 0 
+| checking transid: 3 keylen: 24 auth: 1 
+| checking transid: 3 keylen: 24 auth: 2 
+| checking transid: 12 keylen: 16 auth: 0 
+| checking transid: 12 keylen: 16 auth: 1 
+| checking transid: 12 keylen: 16 auth: 2 
+|esp%senckey:c5f755c8b4089f37158dcff77bc41232
+|esp%sauthkey:59049755e3e4f03747ee82b6029a01be9d6f0f39
+|   using old struct xfrm_algo for XFRM message
+| add inbound eroute 172.31.0.0/16:0 --0-> 10.0.0.0/16:0 => tun.10000@10.0.0.233 (raw_eroute)
+| satype(9) is not used in netlink_raw_eroute.
+| raw_eroute result=1 
+| set up incoming SA, ref=0/4294901761
+| sr for #2: prospective erouted
+| route owner of "awslegacyvpn" prospective erouted: self; eroute owner: self
+| route_and_eroute with c: awslegacyvpn (next: none) ero:awslegacyvpn esr:{(nil)} ro:awslegacyvpn rosr:{(nil)} and state: 2
+| eroute_connection replace eroute 10.0.0.0/16:0 --0-> 172.31.0.0/16:0 => tun.0@207.171.167.234 (raw_eroute)
+| satype(9) is not used in netlink_raw_eroute.
+| raw_eroute result=1 
+| command executing up-client
+| executing up-client: 2>&1 PLUTO_VERB='up-client' PLUTO_VERSION='2.0' PLUTO_CONNECTION='awslegacyvpn' PLUTO_INTERFACE='eth0' PLUTO_NEXT_HOP='10.0.0.1' PLUTO_ME='10.0.0.233' PLUTO_MY_ID='54.165.11.182' PLUTO_MY_CLIENT='10.0.0.0/16' PLUTO_MY_CLIENT_NET='10.0.0.0' PLUTO_MY_CLIENT_MASK='255.255.0.0' PLUTO_MY_PORT='0' PLUTO_MY_PROTOCOL='0' PLUTO_PEER='207.171.167.234' PLUTO_PEER_ID='207.171.167.234' PLUTO_PEER_CLIENT='172.31.0.0/16' PLUTO_PEER_CLIENT_NET='172.31.0.0' PLUTO_PEER_CLIENT_MASK='255.255.0.0' PLUTO_PEER_PORT='0' PLUTO_PEER_PROTOCOL='0' PLUTO_PEER_CA='' PLUTO_STACK='netkey'   PLUTO_CONN_POLICY='PSK+ENCRYPT+TUNNEL+PFS+UP+SAREFTRACK' PLUTO_CONN_ADDRFAMILY='ipv4' PLUTO_XAUTH_USERNAME=''  PLUTO_IS_PEER_CISCO='0' PLUTO_CISCO_DNS_INFO='' PLUTO_CISCO_DOMAIN_INFO='' PLUTO_PEER_BANNER='' PLUTO_NM_CONFIGURED='0' ipsec _updown
+| popen(): cmd is 810 chars long
+| cmd(   0):2>&1 PLUTO_VERB='up-client' PLUTO_VERSION='2.0' PLUTO_CONNECTION='awslegacyvpn' :
+| cmd(  80):PLUTO_INTERFACE='eth0' PLUTO_NEXT_HOP='10.0.0.1' PLUTO_ME='10.0.0.233' PLUTO_MY_:
+| cmd( 160):ID='54.165.11.182' PLUTO_MY_CLIENT='10.0.0.0/16' PLUTO_MY_CLIENT_NET='10.0.0.0' :
+| cmd( 240):PLUTO_MY_CLIENT_MASK='255.255.0.0' PLUTO_MY_PORT='0' PLUTO_MY_PROTOCOL='0' PLUTO:
+| cmd( 320):_PEER='207.171.167.234' PLUTO_PEER_ID='207.171.167.234' PLUTO_PEER_CLIENT='172.3:
+| cmd( 400):1.0.0/16' PLUTO_PEER_CLIENT_NET='172.31.0.0' PLUTO_PEER_CLIENT_MASK='255.255.0.0:
+| cmd( 480):' PLUTO_PEER_PORT='0' PLUTO_PEER_PROTOCOL='0' PLUTO_PEER_CA='' PLUTO_STACK='netk:
+| cmd( 560):ey'   PLUTO_CONN_POLICY='PSK+ENCRYPT+TUNNEL+PFS+UP+SAREFTRACK' PLUTO_CONN_ADDRFA:
+| cmd( 640):MILY='ipv4' PLUTO_XAUTH_USERNAME=''  PLUTO_IS_PEER_CISCO='0' PLUTO_CISCO_DNS_INF:
+| cmd( 720):O='' PLUTO_CISCO_DOMAIN_INFO='' PLUTO_PEER_BANNER='' PLUTO_NM_CONFIGURED='0' ips:
+
+
+
+========================================================================
+PHASE 2 = SA complete = Last Message = ACK
+========================================================================
+
+| cmd( 800):ec _updown:
+| route_and_eroute: firewall_notified: true
+| route_and_eroute: instance "awslegacyvpn", setting eroute_owner {spd=0x7ff39ab62e60,sr=0x7ff39ab62e60} to #2 (was #0) (newest_ipsec_sa=#0)
+| encrypting:
+|   00 00 00 18  d8 55 9e df  cc 19 25 bb  cf c1 2f 4e
+|   3d 53 16 83  9c a8 01 24
+| IV:
+|   54 d5 50 5f  b6 f9 d9 fd  76 14 d3 c3  7d f6 c6 8e
+| unpadded size is: 24
+| emitting 8 zero bytes of encryption padding into ISAKMP Message
+| encrypting 32 using OAKLEY_AES_CBC
+| next IV:  bc 17 73 b7  c3 dd 5e 86  7b 79 38 a6  50 d7 e4 b1
+| emitting length of ISAKMP Message: 60
+| inR1_outI2: instance awslegacyvpn[0], setting newest_ipsec_sa to #2 (was #0) (spd.eroute=#2)
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  b0 93 d9 e1  60 b0 95 f2
+| state hash entry 31
+| v1 peer and cookies match on #2, provided msgid 00000000 vs 4872aa0f
+| v1 peer and cookies match on #1, provided msgid 00000000 vs 00000000
+| v1 state object #1 found, in STATE_MAIN_I4
+"awslegacyvpn" #2: Dead Peer Detection (RFC 3706): enabled
+| state: 2 requesting event none to be deleted by /home/ec2-user/openswan-2.6.43/programs/pluto/dpd.c:168
+| inserting event EVENT_DPD, timeout in 10 seconds for #2
+| event added at head of queue
+| state: 1 requesting event EVENT_DPD to be deleted by /home/ec2-user/openswan-2.6.43/programs/pluto/dpd.c:180
+| complete state transition with STF_OK
+"awslegacyvpn" #2: transition from state STATE_QUICK_I1 to state STATE_QUICK_I2
+| deleting event for #2
+| sending reply packet to 207.171.167.234:500 (from port 500)
+| sending 60 bytes for STATE_QUICK_I1 through eth0:500 to 207.171.167.234:500 (using #2)
+|   82 b6 5d 31  50 15 ab 45  b0 93 d9 e1  60 b0 95 f2
+|   08 10 20 01  48 72 aa 0f  00 00 00 3c  90 a0 91 d4
+|   c7 d9 4a 89  79 9e ae b4  98 ff ec e2  bc 17 73 b7
+|   c3 dd 5e 86  7b 79 38 a6  50 d7 e4 b1
+| inserting event EVENT_SA_REPLACE, timeout in 2900 seconds for #2
+| event added after event EVENT_PENDING_PHASE2
+"awslegacyvpn" #2: STATE_QUICK_I2: sent QI2, IPsec SA established tunnel mode {ESP=>0xdee4d1d8 <0x7e996750 xfrm=AES_128-HMAC_SHA1 NATOA=none NATD=none DPD=enabled}
+| modecfg pull: noquirk policy:push not-client
+| phase 1 is done, looking for phase 2 to unpend
+| * processed 1 messages from cryptographic helpers 
+| next event EVENT_DPD in 10 seconds for #2
+| next event EVENT_DPD in 10 seconds for #2
+|  
+| *received whack message
+| kernel_alg_esp_enc_ok(12,0): alg_id=12, alg_ivlen=8, alg_minbits=128, alg_maxbits=256, res=0, ret=1
+| kernel_alg_esp_auth_keylen(auth=2, sadb_aalg=3): a_keylen=20
+| get esp.dee4d1d8@207.171.167.234
+| get esp.7e996750@10.0.0.233
+| * processed 0 messages from cryptographic helpers 
+| next event EVENT_DPD in 5 seconds for #2
+| next event EVENT_DPD in 5 seconds for #2
+| 
+
+
+
+
+========================================================================
+TEAR DOWN
+========================================================================
+
+
+ 
+| *received whack message
+shutting down
+forgetting secrets
+| processing connection awslegacyvpn
+"awslegacyvpn": deleting connection
+| processing connection awslegacyvpn
+"awslegacyvpn" #2: deleting state (STATE_QUICK_I2)
+| deleting event for #2
+| deleting state #2
+| state: 2 requesting event EVENT_DPD to be deleted by /home/ec2-user/openswan-2.6.43/programs/pluto/state.c:416
+| **emit ISAKMP Message:
+|    initiator cookie:
+|   82 b6 5d 31  50 15 ab 45
+|    responder cookie:
+|   b0 93 d9 e1  60 b0 95 f2
+|    next payload type: ISAKMP_NEXT_HASH
+|    ISAKMP version: ISAKMP Version 1.0 (rfc2407)
+|    exchange type: ISAKMP_XCHG_INFO
+|    flags: ISAKMP_FLAG_ENCRYPTION
+|    message ID:  4e ca 5f d0
+| ***emit ISAKMP Hash Payload:
+|    next payload type: ISAKMP_NEXT_D
+| emitting 20 zero bytes of HASH(1) into ISAKMP Hash Payload
+| emitting length of ISAKMP Hash Payload: 24
+| ***emit ISAKMP Delete Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+|    DOI: ISAKMP_DOI_IPSEC
+|    protocol ID: 3
+|    SPI size: 4
+|    number of SPIs: 1
+| emitting 4 raw bytes of delete payload into ISAKMP Delete Payload
+| delete payload  7e 99 67 50
+| emitting length of ISAKMP Delete Payload: 16
+| HASH(1) computed:
+|   b8 ee 35 9c  75 59 0d 3e  82 a1 83 37  bb 9a 35 75
+|   0f f2 51 9a
+| last Phase 1 IV:  9f e0 da dd  18 73 35 ac  68 be 40 02  5b 92 7a c3
+| current Phase 1 IV:  9f e0 da dd  18 73 35 ac  68 be 40 02  5b 92 7a c3
+| computed Phase 2 IV:
+|   e3 d8 33 87  8c b0 2b 3c  98 e3 30 74  22 3f f8 fe
+|   e4 ee e0 dd
+| encrypting:
+|   0c 00 00 18  b8 ee 35 9c  75 59 0d 3e  82 a1 83 37
+|   bb 9a 35 75  0f f2 51 9a  00 00 00 10  00 00 00 01
+|   03 04 00 01  7e 99 67 50
+| IV:
+|   e3 d8 33 87  8c b0 2b 3c  98 e3 30 74  22 3f f8 fe
+|   e4 ee e0 dd
+| unpadded size is: 40
+| emitting 8 zero bytes of encryption padding into ISAKMP Message
+| encrypting 48 using OAKLEY_AES_CBC
+| next IV:  5e ee 04 e2  fc da 5b 86  1b 10 a1 12  6c ab ca e4
+| emitting length of ISAKMP Message: 76
+| sending 76 bytes for delete notify through eth0:500 to 207.171.167.234:500 (using #1)
+|   82 b6 5d 31  50 15 ab 45  b0 93 d9 e1  60 b0 95 f2
+|   08 10 05 01  4e ca 5f d0  00 00 00 4c  ae 40 9c a3
+|   6b 28 5f ad  ed fd 89 18  fe 77 04 b6  38 3a 98 d7
+|   bc eb 18 c2  70 08 fb 6b  fe c0 0d 20  5e ee 04 e2
+|   fc da 5b 86  1b 10 a1 12  6c ab ca e4
+| deleting event for #2
+| no suspended cryptographic state for 2 
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  b0 93 d9 e1  60 b0 95 f2
+| state hash entry 31
+| command executing down-client
+| executing down-client: 2>&1 PLUTO_VERB='down-client' PLUTO_VERSION='2.0' PLUTO_CONNECTION='awslegacyvpn' PLUTO_INTERFACE='eth0' PLUTO_NEXT_HOP='10.0.0.1' PLUTO_ME='10.0.0.233' PLUTO_MY_ID='54.165.11.182' PLUTO_MY_CLIENT='10.0.0.0/16' PLUTO_MY_CLIENT_NET='10.0.0.0' PLUTO_MY_CLIENT_MASK='255.255.0.0' PLUTO_MY_PORT='0' PLUTO_MY_PROTOCOL='0' PLUTO_PEER='207.171.167.234' PLUTO_PEER_ID='207.171.167.234' PLUTO_PEER_CLIENT='172.31.0.0/16' PLUTO_PEER_CLIENT_NET='172.31.0.0' PLUTO_PEER_CLIENT_MASK='255.255.0.0' PLUTO_PEER_PORT='0' PLUTO_PEER_PROTOCOL='0' PLUTO_PEER_CA='' PLUTO_STACK='netkey'   PLUTO_CONN_POLICY='PSK+ENCRYPT+TUNNEL+PFS+UP+SAREFTRACK' PLUTO_CONN_ADDRFAMILY='ipv4' PLUTO_XAUTH_USERNAME=''  PLUTO_IS_PEER_CISCO='0' PLUTO_CISCO_DNS_INFO='' PLUTO_CISCO_DOMAIN_INFO='' PLUTO_PEER_BANNER='' PLUTO_NM_CONFIGURED='0' ipsec _updown
+| popen(): cmd is 812 chars long
+| cmd(   0):2>&1 PLUTO_VERB='down-client' PLUTO_VERSION='2.0' PLUTO_CONNECTION='awslegacyvpn:
+| cmd(  80):' PLUTO_INTERFACE='eth0' PLUTO_NEXT_HOP='10.0.0.1' PLUTO_ME='10.0.0.233' PLUTO_M:
+| cmd( 160):Y_ID='54.165.11.182' PLUTO_MY_CLIENT='10.0.0.0/16' PLUTO_MY_CLIENT_NET='10.0.0.0:
+| cmd( 240):' PLUTO_MY_CLIENT_MASK='255.255.0.0' PLUTO_MY_PORT='0' PLUTO_MY_PROTOCOL='0' PLU:
+| cmd( 320):TO_PEER='207.171.167.234' PLUTO_PEER_ID='207.171.167.234' PLUTO_PEER_CLIENT='172:
+| cmd( 400):.31.0.0/16' PLUTO_PEER_CLIENT_NET='172.31.0.0' PLUTO_PEER_CLIENT_MASK='255.255.0:
+| cmd( 480):.0' PLUTO_PEER_PORT='0' PLUTO_PEER_PROTOCOL='0' PLUTO_PEER_CA='' PLUTO_STACK='ne:
+| cmd( 560):tkey'   PLUTO_CONN_POLICY='PSK+ENCRYPT+TUNNEL+PFS+UP+SAREFTRACK' PLUTO_CONN_ADDR:
+| cmd( 640):FAMILY='ipv4' PLUTO_XAUTH_USERNAME=''  PLUTO_IS_PEER_CISCO='0' PLUTO_CISCO_DNS_I:
+| cmd( 720):NFO='' PLUTO_CISCO_DOMAIN_INFO='' PLUTO_PEER_BANNER='' PLUTO_NM_CONFIGURED='0' i:
+| cmd( 800):psec _updown:
+| request to replace with shunt a prospective erouted policy with netkey kernel --- experimental
+| satype(0) is not used in netlink_raw_eroute.
+| delete esp.dee4d1d8@207.171.167.234
+| delete inbound eroute 172.31.0.0/16:0 --0-> 10.0.0.0/16:0 => unk255.10000@10.0.0.233 (raw_eroute)
+| satype(0) is not used in netlink_raw_eroute.
+| raw_eroute result=1 
+| delete esp.7e996750@10.0.0.233
+| processing connection awslegacyvpn
+"awslegacyvpn" #1: deleting state (STATE_MAIN_I4)
+| deleting event for #1
+| deleting state #1
+| **emit ISAKMP Message:
+|    initiator cookie:
+|   82 b6 5d 31  50 15 ab 45
+|    responder cookie:
+|   b0 93 d9 e1  60 b0 95 f2
+|    next payload type: ISAKMP_NEXT_HASH
+|    ISAKMP version: ISAKMP Version 1.0 (rfc2407)
+|    exchange type: ISAKMP_XCHG_INFO
+|    flags: ISAKMP_FLAG_ENCRYPTION
+|    message ID:  d8 d1 ce 39
+| ***emit ISAKMP Hash Payload:
+|    next payload type: ISAKMP_NEXT_D
+| emitting 20 zero bytes of HASH(1) into ISAKMP Hash Payload
+| emitting length of ISAKMP Hash Payload: 24
+| ***emit ISAKMP Delete Payload:
+|    next payload type: ISAKMP_NEXT_NONE
+|    DOI: ISAKMP_DOI_IPSEC
+|    protocol ID: 1
+|    SPI size: 16
+|    number of SPIs: 1
+| emitting 16 raw bytes of delete payload into ISAKMP Delete Payload
+| delete payload  82 b6 5d 31  50 15 ab 45  b0 93 d9 e1  60 b0 95 f2
+| emitting length of ISAKMP Delete Payload: 28
+| HASH(1) computed:
+|   e5 cf fb 19  a7 1c af fc  36 7d 0b 7a  a4 3a fb dd
+|   61 d3 ae 64
+| last Phase 1 IV:  9f e0 da dd  18 73 35 ac  68 be 40 02  5b 92 7a c3
+| current Phase 1 IV:  9f e0 da dd  18 73 35 ac  68 be 40 02  5b 92 7a c3
+| computed Phase 2 IV:
+|   65 b5 a0 7d  fb a4 aa 6d  f2 f6 ff 65  08 e7 bf 80
+|   bc 3d 03 26
+| encrypting:
+|   0c 00 00 18  e5 cf fb 19  a7 1c af fc  36 7d 0b 7a
+|   a4 3a fb dd  61 d3 ae 64  00 00 00 1c  00 00 00 01
+|   01 10 00 01  82 b6 5d 31  50 15 ab 45  b0 93 d9 e1
+|   60 b0 95 f2
+| IV:
+|   65 b5 a0 7d  fb a4 aa 6d  f2 f6 ff 65  08 e7 bf 80
+|   bc 3d 03 26
+| unpadded size is: 52
+| emitting 12 zero bytes of encryption padding into ISAKMP Message
+| encrypting 64 using OAKLEY_AES_CBC
+| next IV:  d6 20 f1 b9  c4 2f f9 b5  03 71 0e e0  20 fc fb 4f
+| emitting length of ISAKMP Message: 92
+| sending 92 bytes for delete notify through eth0:500 to 207.171.167.234:500 (using #1)
+|   82 b6 5d 31  50 15 ab 45  b0 93 d9 e1  60 b0 95 f2
+|   08 10 05 01  d8 d1 ce 39  00 00 00 5c  a9 19 61 ac
+|   86 cf 65 ed  bc e5 b4 99  ef d8 88 72  f0 ce fc 43
+|   c1 2e a1 24  92 30 e5 a0  61 9a b2 69  87 cf 4c d3
+|   dd f3 2c e5  67 43 e6 4e  a6 4c 6c c3  d6 20 f1 b9
+|   c4 2f f9 b5  03 71 0e e0  20 fc fb 4f
+| deleting event for #1
+| no suspended cryptographic state for 1 
+| ICOOKIE:  82 b6 5d 31  50 15 ab 45
+| RCOOKIE:  b0 93 d9 e1  60 b0 95 f2
+| state hash entry 31
+| request to delete a unrouted policy with netkey kernel --- experimental
+| satype(0) is not used in netlink_raw_eroute.
+| satype(0) is not used in netlink_raw_eroute.
+| route owner of "awslegacyvpn" unrouted: NULL
+| command executing unroute-client
+| executing unroute-client: 2>&1 PLUTO_VERB='unroute-client' PLUTO_VERSION='2.0' PLUTO_CONNECTION='awslegacyvpn' PLUTO_INTERFACE='eth0' PLUTO_NEXT_HOP='10.0.0.1' PLUTO_ME='10.0.0.233' PLUTO_MY_ID='54.165.11.182' PLUTO_MY_CLIENT='10.0.0.0/16' PLUTO_MY_CLIENT_NET='10.0.0.0' PLUTO_MY_CLIENT_MASK='255.255.0.0' PLUTO_MY_PORT='0' PLUTO_MY_PROTOCOL='0' PLUTO_PEER='207.171.167.234' PLUTO_PEER_ID='207.171.167.234' PLUTO_PEER_CLIENT='172.31.0.0/16' PLUTO_PEER_CLIENT_NET='172.31.0.0' PLUTO_PEER_CLIENT_MASK='255.255.0.0' PLUTO_PEER_PORT='0' PLUTO_PEER_PROTOCOL='0' PLUTO_PEER_CA='' PLUTO_STACK='netkey'   PLUTO_CONN_POLICY='PSK+ENCRYPT+TUNNEL+PFS+UP+SAREFTRACK' PLUTO_CONN_ADDRFAMILY='ipv4'   PLUTO_IS_PEER_CISCO='0' PLUTO_CISCO_DNS_INFO='' PLUTO_CISCO_DOMAIN_INFO='' PLUTO_PEER_BANNER='' PLUTO_NM_CONFIGURED='0' ipsec _updown
+| popen(): cmd is 792 chars long
+| cmd(   0):2>&1 PLUTO_VERB='unroute-client' PLUTO_VERSION='2.0' PLUTO_CONNECTION='awslegacy:
+| cmd(  80):vpn' PLUTO_INTERFACE='eth0' PLUTO_NEXT_HOP='10.0.0.1' PLUTO_ME='10.0.0.233' PLUT:
+| cmd( 160):O_MY_ID='54.165.11.182' PLUTO_MY_CLIENT='10.0.0.0/16' PLUTO_MY_CLIENT_NET='10.0.:
+| cmd( 240):0.0' PLUTO_MY_CLIENT_MASK='255.255.0.0' PLUTO_MY_PORT='0' PLUTO_MY_PROTOCOL='0' :
+| cmd( 320):PLUTO_PEER='207.171.167.234' PLUTO_PEER_ID='207.171.167.234' PLUTO_PEER_CLIENT=':
+| cmd( 400):172.31.0.0/16' PLUTO_PEER_CLIENT_NET='172.31.0.0' PLUTO_PEER_CLIENT_MASK='255.25:
+| cmd( 480):5.0.0' PLUTO_PEER_PORT='0' PLUTO_PEER_PROTOCOL='0' PLUTO_PEER_CA='' PLUTO_STACK=:
+| cmd( 560):'netkey'   PLUTO_CONN_POLICY='PSK+ENCRYPT+TUNNEL+PFS+UP+SAREFTRACK' PLUTO_CONN_A:
+| cmd( 640):DDRFAMILY='ipv4'   PLUTO_IS_PEER_CISCO='0' PLUTO_CISCO_DNS_INFO='' PLUTO_CISCO_D:
+| cmd( 720):OMAIN_INFO='' PLUTO_PEER_BANNER='' PLUTO_NM_CONFIGURED='0' ipsec _updown:
+| alg_info_delref(0x7ff39ab636b0) alg_info->ref_cnt=1
+| alg_info_delref(0x7ff39ab636b0) freeing alg_info
+| alg_info_delref(0x7ff39ab625a0) alg_info->ref_cnt=1
+| alg_info_delref(0x7ff39ab625a0) freeing alg_info
+shutting down interface lo/lo ::1:500
+shutting down interface lo/lo 127.0.0.1:500
+shutting down interface eth0/eth0 10.0.0.233:500
+pluto_crypto_helper: helper (0) is  normal exiting 
